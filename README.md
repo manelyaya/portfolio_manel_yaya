@@ -14,5 +14,5 @@ https://trello.com/invite/b/68c19a7e1a6d1e39538e6bc2/ATTI4411d7829b1ef024c6c2dbe
 Une page, Carrousel
 
 ### choix de la composante Vue.js
-Dark mode / Light mode toggle
+Dark mode / Light mode toggle ,
 Carrousel
