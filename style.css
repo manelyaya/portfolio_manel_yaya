@@ -1,0 +1,8 @@
+@font-face {
+    src: url("./typo/amoria/AMORIA.otf") format("opentype");
+    font-family: "amoria";
+  }
+
+  h1{
+    font-family: "amoria";
+  }
