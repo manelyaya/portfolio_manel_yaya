@@ -1,20 +1,40 @@
 @font-face {
-    src: url("./typo/amoria/AMORIA.otf") format("opentype");
-    font-family: "amoria";
-  }
+  src: url("./typo/amoria/AMORIA.otf") format("opentype");
+  font-family: "amoria";
+}
 
-  @font-face {
-    src: url("./typo/lexia_readable/LexieReadable-Regular.ttf") format("truetype");
-    font-family: "lexi";
-  }
+@font-face {
+  src: url("./typo/lexia_readable/LexieReadable-Regular.ttf") format("truetype");
+  font-family: "lexi";
+}
 
-  h1{
-    font-family: "amoria";
-    display: flex;
+h1 {
+  color: #872341;
+  font-family: "amoria";
+  display: flex;
+  justify-content: center;
+  font-size: 100px;
+  margin: 10px;
+}
 
-  }
+h2 {
+  font-family: "lexi";
+}
 
+.navbar {
+  background-color: #09122c;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  display:flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: #872341;
+  font-size: 45px;
+  text-decoration: none;
+ 
+ 
   
-  h2{
-    font-family: "lexi";
-  }
+}
