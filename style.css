@@ -3,6 +3,18 @@
     font-family: "amoria";
   }
 
+  @font-face {
+    src: url("./typo/lexia_readable/LexieReadable-Regular.ttf") format("truetype");
+    font-family: "lexi";
+  }
+
   h1{
     font-family: "amoria";
+    display: flex;
+
+  }
+
+  
+  h2{
+    font-family: "lexi";
   }
