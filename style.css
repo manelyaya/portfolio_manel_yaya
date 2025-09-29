@@ -16,7 +16,24 @@
 
 body {
   min-height: 100vh;
+	background: linear-gradient(-45deg, #F5F5F5, #f2e8e1, #f8c9d4, #b76e79);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .titre, .titre2 {
   display: flex;
@@ -32,6 +49,7 @@ body {
   font-size: 100px;
  text-align: center;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  
 }
 
 
@@ -52,7 +70,8 @@ nav {
   padding-top: 5px;
   padding-left: 10%;
   padding-right: 10%;
-  background-color: #09122C;
+
+  
 
 }
 
@@ -72,6 +91,7 @@ nav {
   color: #872341;
   font-size: 35px;
   text-decoration: none;
+  list-style-type: none;
 }
 
 .container {
@@ -84,6 +104,7 @@ nav {
 .description p {
   color: #872341;
   font-family: "lexi";
+  font-size: 25px;
 }
 
 .description {
@@ -100,6 +121,7 @@ nav {
 }
 
 .camera img {
+  box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
   position: absolute;
   top: 0;
   left: 0;
