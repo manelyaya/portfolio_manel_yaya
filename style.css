@@ -26,8 +26,6 @@ body {
 }
 
 
-
-
  h1, h2 {
   color: #872341;
   font-family: "amoria";
@@ -89,8 +87,8 @@ nav {
 }
 
 .description {
-  width: 40%;
-  text-align: justify;
+  width: 60%;
+  text-align: center;
   margin: 100px;
 }
 
