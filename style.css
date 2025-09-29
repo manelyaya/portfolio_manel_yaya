@@ -17,16 +17,29 @@
 body{
   min-height:100vh;
 }
+.titre {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  cursor: pointer;
+}
 
 
-h1 {
+.titre h1 {
   color: #872341;
   font-family: "amoria";
-  display: flex;
-  justify-content: center;
   font-size: 100px;
   margin: 10px;
-  
+  padding: 5px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.titre:hover h1:first-child {
+  transform: translateY(70px);
+}
+
+.titre:hover h1:last-child {
+  transform: translateY(-70px);
 }
 
 h2 {
@@ -39,16 +52,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 5px;
   padding-left: 10%;
   padding-right:10%;
+  background-color: #09122C;
   
 }
 
 .navbar ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 5px;
+  padding: 25px;
 }
 
 .hero{
@@ -59,4 +73,27 @@ width: 100%;
   color: #872341;
   font-size: 35px;
   text-decoration: none;
+}
+
+.container {
+  display: flex;  
+  align-items: flex-start; 
+  gap: 20px;           
+  margin: 100px;
+}
+
+.description p {
+  color: #872341;
+  font-family: "lexi";
+}
+
+.description{
+  width: 40%;
+  text-align: justify;
+  margin: 100px;
+}
+.camera img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
