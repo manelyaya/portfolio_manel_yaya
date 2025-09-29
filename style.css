@@ -43,10 +43,6 @@ body {
   transform: translateY(-70px);
 }
 
-h2 {
-  font-family: "amoria";
-  color: #872341;
-}
 
 
 nav {
@@ -64,6 +60,8 @@ nav {
   list-style-type: none;
   display: inline-block;
   padding: 25px;
+  font-family: "amoria";
+  color: #872341;
 }
 
 .hero {
