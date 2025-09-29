@@ -26,21 +26,21 @@ body {
 }
 
 
-.titre h1 {
+ h1 {
   color: #872341;
   font-family: "amoria";
   font-size: 100px;
-  margin: 10px;
-  padding: 5px;
+ text-align: center;
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+
 .titre:hover h1:first-child {
-  transform: translateY(70px);
+  transform: translateY(55px);
 }
 
 .titre:hover h1:last-child {
-  transform: translateY(-70px);
+  transform: translateY(-55px);
 }
 
 
@@ -133,7 +133,7 @@ img.grand {
 
 .nom {
   position: absolute;
-  bottom: 1vw;
+  bottom: 4vw;
   left: 53%;
   color: #872341;
   font-family: "amoria";
