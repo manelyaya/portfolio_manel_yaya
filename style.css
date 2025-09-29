@@ -79,7 +79,7 @@ width: 100%;
   display: flex;  
   align-items: flex-start; 
   gap: 20px;           
-  margin: 100px;
+  margin: 10px;
 }
 
 .description p {
@@ -92,8 +92,54 @@ width: 100%;
   text-align: justify;
   margin: 100px;
 }
-.camera img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+
+.camera{
+    position: relative;
+  width: 500px;     
+  height: 500px;   
+  overflow: hidden; 
 }
+
+.camera img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;     
+  height: 100%;    
+  object-fit: cover; 
+  transition: opacity 0.5s ease;
+}
+
+.camera p{
+   color: #872341;
+  font-family: "amoria";
+}
+
+
+ img.grand {
+ 
+   opacity: 0;
+  z-index: 2;
+  transform: scale(1.2); /* zoom effect */
+}
+
+
+.camera:hover img.petit {
+  opacity: 0;
+}
+
+.camera:hover img.grand {
+  opacity: 1;
+}
+
+.nom{
+ 
+  position: absolute;
+  bottom: 1vw; 
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5vw;  /* scales with viewport width */
+  padding: 0.5vw 1vw;
+}
+
+
