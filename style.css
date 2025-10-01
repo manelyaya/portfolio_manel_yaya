@@ -118,16 +118,16 @@ a:hover{
 }
 
 .camera {
-  width: 500px;           /* set desired width */
-  height: auto;           /* let height follow the image */
-  position: relative;     /* container for absolute child if needed */
+  width: 500px;           
+  height: auto;           
+  position: relative;     
 }
 
 .nom {
-  position: absolute;   /* positions relative to .camera */
-  bottom: -50px;         /* space from bottom of image */
-  left: 50%;            /* center horizontally */
-  transform: translateX(-50%); /* perfect centering */
+  position: absolute;   
+  bottom: -50px;         
+  left: 50%;            
+  transform: translateX(-50%); 
   color: #872341;
   font-family: "amoria";
   text-align: center;
@@ -143,11 +143,6 @@ a:hover{
 }
 
 
-
-.camera p {
-  color: #872341;
-  font-family: "amoria";
-}
 
 
 
