@@ -1,13 +1,15 @@
 @font-face {
-  src: url("./typo/amoria/AMORIA.otf") format("opentype");
+  src: url("./typo/AMORIA.otf") format("opentype");
   font-family: "amoria";
 }
 
 @font-face {
-  src: url("./typo/lexia_readable/LexieReadable-Regular.ttf") format("truetype");
-  font-family: "lexi";
+  font-family: 'lexi';
+  src: url('./typo/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype'),
+       url('./typo/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-
 * {
   margin: 0px;
   padding: 0px;
@@ -23,7 +25,6 @@ body {
 	background-size: 400% 400%;
 	animation: gradient 25s ease infinite;
 	height: 100vh;
-  
 }
 
 html{
@@ -51,13 +52,21 @@ html{
 }
 
 
- h1, h2 {
+ h1 {
   color: #872341;
   font-family: "amoria";
   font-size: 100px;
   text-align: center;
   transition: transform 0.5s ease, opacity 0.5s ease;
   
+}
+
+h2{
+  color: #872341;
+  font-family: "amoria";
+  font-size: 60px;
+  text-align: center;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 
@@ -74,13 +83,13 @@ html{
 }
 
 .titre2:hover h2:first-child {
-  transform: translateY(55px);
+  transform: translateY(30px);
    color: #09122C;
   
 }
 
 .titre2:hover h2:last-child {
-  transform: translateY(-55px);
+  transform: translateY(-35px);
    color: #09122C;
 }
 
@@ -135,17 +144,20 @@ a:hover{
 .camera {
   width: 500px;           
   height: auto;           
-  position: relative;     
+  position: relative;   
+  filter: sepia(0.5) hue-rotate(-30deg) saturate(1.2) contrast(0.8);
 }
 
 .nom {
   position: absolute;   
-  bottom: -50px;         
+  bottom: -70px;         
   left: 50%;            
   transform: translateX(-50%); 
   color: #872341;
-  font-family: "amoria";
+  font-family: "lexi";
+  font-weight: 600;
   text-align: center;
+  font-size: larger;
 }
 
 
