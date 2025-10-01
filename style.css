@@ -7,14 +7,21 @@
   font-family: 'lexi';
   src: url('./typo/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype'),
        url('./typo/EBGaramond-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
+
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  
+}
+
+.cursor{
+  z-index: 999;
+  background: #09122C;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 body {
@@ -94,20 +101,21 @@ h2{
 }
 
 
-nav, .navbar {
+.navbar {
   display: flex;
-}
-
-nav{
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
   height: 15vh;
+  align-items: center;
 }
 
 .navbar{
-gap: 40rem;
 list-style: none;
 font-size: 1.5rem;
+}
+
+ul{
+  display: flex;
+  justify-content: space-around;
 }
 
 a{
