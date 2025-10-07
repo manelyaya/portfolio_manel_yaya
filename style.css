@@ -177,121 +177,136 @@ a:hover{
   transition: transform 0.5s ease;
 }
 
-
-
-.card.card-carousel {
-    border: 0;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    border-radius: 6px ;
-    color: rgba(0,0,0,.87);
-    background: #fff;
-    width: 100%;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-.card.card-carousel img{
-    border-radius: 6px;
-}
-
-
-
-.carousel-indicators {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    left: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
+.carousel {
     margin-left: 15%;
-    list-style: none;
+    margin-right: 15%;
+    
 }
 
-.carousel .carousel-indicators {
-    bottom: 5px;
-}
-
-.carousel .carousel-indicators li {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    text-indent: -999px;
-    cursor: pointer;
-    border: 1px solid #fff;
-    border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.12), 0 1px 5px 0 rgba(0,0,0,.2);
-    border-radius: 2px;
-}
-
-.carousel .carousel-indicators .active{
-    margin: 11px 10px; 
-} 
-
-.carousel .carousel-indicators li {
-    margin: 11px 10px;
-}
-
-.carousel .carousel-indicators .active {
-    margin-top: 10px;
-    transform: scale(1.5);
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
-}
-
-.carousel-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-item {
-    position: relative;
-    display: none;
-    align-items: center;
-    width: 100% !important;
-    transition: transform .6s ease;
-    backface-visibility: hidden;
-    perspective: 1000px;
-}
-
-.carousel-item.active {
+ul.slides {
     display: block;
-}
-
-.carousel .carousel-caption {
-    padding-bottom: 45px;
-}
-
-.carousel .carousel-caption .material-icons {
     position: relative;
-    top: 5px;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+    border-radius: 40px;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.5);
 }
 
-.carousel .carousel-control-next .material-icons{
-    z-index: 5;
-    display: inline-block;
-    font-size: 50px;
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+     filter: sepia(0.5) hue-rotate(-30deg) saturate(1.2) contrast(0.8);
+}
+
+.carousel-controls {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: 50px;
-    margin: auto;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
 }
 
-.carousel .carousel-control-prev .material-icons {
-    z-index: 5;
-    display: inline-block;
-    font-size: 50px;
+.carousel-controls label {
+    display: none;
     position: absolute;
-    top: 0;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: 50px;
-    margin: auto;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
 }
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
