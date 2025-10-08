@@ -175,7 +175,7 @@ a:hover{
   height: auto;           
   border-radius: 20px;
   transition: transform 0.5s ease;
-  box-shadow: 0 6px 16px #09122C;
+  box-shadow: 0 0 15px #872341, 0 0 25px #09122C;
 }
 
 .carousel {
@@ -195,7 +195,7 @@ ul.slides {
     overflow: hidden;
     list-style: none;
     border-radius: 40px;
-    box-shadow: 0 6px 16px #09122C;
+    box-shadow: 0 0 15px #872341, 0 0 25px #09122C;
 }
 
 .slides * {
