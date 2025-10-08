@@ -55,7 +55,8 @@ html{
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
+  cursor: none;
+
 }
 
 
@@ -173,13 +174,15 @@ a:hover{
   width: 100%;           
   height: auto;           
   border-radius: 20px;
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.5);
   transition: transform 0.5s ease;
+  box-shadow: 0 6px 16px #09122C;
 }
 
 .carousel {
-    margin-left: 15%;
+    margin-left: 10%;
     margin-right: 15%;
+    width: 80%;
+    
     
 }
 
@@ -192,7 +195,7 @@ ul.slides {
     overflow: hidden;
     list-style: none;
     border-radius: 40px;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 6px 16px #09122C;
 }
 
 .slides * {
@@ -206,6 +209,7 @@ ul.slides {
 
 ul.slides input {
     display: none; 
+    
 }
 
 
@@ -239,6 +243,7 @@ ul.slides input {
     font-size: 100px;
     line-height: 600px;
     color: #fff;
+    cursor: pointer;
 }
 
 .carousel-controls label {
@@ -277,9 +282,10 @@ ul.slides input {
     bottom: 20px;
     z-index: 999;
     text-align: center;
+    cursor: pointer;
 }
 
-.carousel-dots .carousel-dot {
+.carousel-dots .carousel-dot { 
     display: inline-block;
     width: 30px;
     height: 30px;
@@ -287,6 +293,7 @@ ul.slides input {
     background-color: #fff;
     opacity: 0.5;
     margin: 10px;
+    cursor: pointer;
 }
 
 input:checked + .slide-container .slide-image {
