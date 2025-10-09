@@ -178,15 +178,26 @@ a:hover{
   border-radius: 20px;
   transition: transform 0.5s ease;
   box-shadow: 0 0 15px #872341, 0 0 25px #09122C;
+  object-fit: fill;
 }
 
 .carousel {
     margin-left: 10%;
     margin-right: 15%;
     width: 80%;
-    
-    
 }
+
+.imparfaite{
+  width: 50%;           
+  height: auto;           
+  border-radius: 20px;
+  box-shadow: 0 0 15px #872341, 0 0 25px #09122C;
+  object-fit: fill;
+  margin-left: 25%;
+  margin-right: 15%;
+  margin-top: 5%;
+}
+
 
 ul.slides {
     display: block;
@@ -324,13 +335,15 @@ input:checked + .slide-container .nav label { display: block; }
 
 .card {
   width: 50%;
-  height: 80%;
+  height: 50%;
   border-radius: 4px;
   display: flex;
-  gap: 5px;
-  padding: .4em;
+  gap: 20px;
+  padding: 0.4em;
   margin-left: 25%;
   margin-right: 15%;
+  margin-bottom: 60%;
+ 
 
 }
 
@@ -341,11 +354,11 @@ input:checked + .slide-container .nav label { display: block; }
   cursor: pointer;
   border-radius: 10px;
   transition: all .5s;
-  border: 5px solid #fed6ff;
+  border: 5px solid #8d4b5f;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 16px rgba(236,72,153,0.7);
+  box-shadow: 0 0 16px #09122C;
   
 }
 
@@ -359,8 +372,7 @@ input:checked + .slide-container .nav label { display: block; }
   text-align: center;
   transform: rotate(-90deg);
   transition: all .5s;
-  text-transform: uppercase;
-  color: #09122C;
+  color: #872341;
   letter-spacing: .1em;
   font-family: "lexi";
   font-weight: bolder;
