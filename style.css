@@ -82,6 +82,18 @@ h2 {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
+.text{
+  color: #872341;
+  font-family: "lexi";
+  font-size: 40px;
+  margin-left: 50rem;
+}
+
+.text p{
+  font-size: 20px;
+  width: 55%;
+}
+
 
 
 .titre:hover h1:first-child {
@@ -151,7 +163,8 @@ a:hover {
 }
 
 .description {
-  width: 60%;
+  width: 50%;
+  margin-left: 20rem;
   text-align: justify;
   line-height: 1.6;
 }
@@ -159,7 +172,7 @@ a:hover {
 .camera {
   width: 500px;
   height: auto;
-  position: relative;
+  margin-right: 20rem;
   filter: sepia(0.5) hue-rotate(-30deg) saturate(1.2) contrast(0.8);
 }
 
@@ -181,7 +194,7 @@ a:hover {
   height: auto;
   border-radius: 20px;
   transition: transform 0.5s ease;
-  box-shadow: 0 0 15px #872341, 0 0 25px #09122C;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 99%, 50%, 0.25);
   object-fit: fill;
 }
 
@@ -242,7 +255,7 @@ a:hover {
 
 .slider-wrapper {
 	position: relative;
-	max-width: 48rem;
+	max-width: 60rem;
 	margin: 0 auto;
 }
 
@@ -252,13 +265,13 @@ a:hover {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 99%, 50%, 0.25);
 	border-radius: 0.5rem;
-	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
+	-ms-overflow-style: none; 
+	scrollbar-width: none; 
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+
 .slider::-webkit-scrollbar {
 	display: none;
 }
@@ -267,6 +280,11 @@ a:hover {
 	flex: 1 0 100%;
 	scroll-snap-align: start;
 	object-fit: cover;
+  filter: sepia(0.5) hue-rotate(-30deg) saturate(1.2) contrast(0.8);
+}
+
+.slider img:hover{
+  filter: none;
 }
 
 .slider-nav {
@@ -283,7 +301,7 @@ a:hover {
 	width: 0.5rem;
 	height: 0.5rem;
 	border-radius: 50%;
-	background-color: #fff;
+	background-color: #f8f8f8;
 	opacity: 0.75;
 	transition: opacity ease 250ms;
 }
