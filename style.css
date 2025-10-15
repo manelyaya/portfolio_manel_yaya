@@ -25,11 +25,6 @@
 }
 
 body {
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #e1e8eb, #e9eff0, #f8c9d4, #b76e79);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
   height: 100%;
   display: grid;
 
@@ -55,18 +50,44 @@ html {
 }
 
 
+.hero{
+   background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
+    linear-gradient(-45deg, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
+.projet{
+   background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
+    linear-gradient(-45deg,#1e1f26, #2a2c34, #3b3d47, #4a4c57);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
+.part{
+   background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
+    linear-gradient(-45deg, #faf9f6,  #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+  background-size: 400% 400%;
+  animation: gradient 25s ease infinite;
+}
+
+
 .titre,
 .titre2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: none;
+  margin-top: 10rem;
 
 }
 
 
 h1 {
-  color: #872341;
+  color: #111;
   font-family: "amoria";
   font-size: 100px;
   text-align: center;
@@ -75,15 +96,16 @@ h1 {
 }
 
 h2 {
-  color: #872341;
-  font-family: "amoria";
+  color: #111;
+  font-family: "lexi";
   font-size: 60px;
   text-align: center;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+
+ 
 }
 
-.text{
-  color: #872341;
+.text h3{
+  color: #111;
   font-family: "lexi";
   font-size: 40px;
   margin-left: 50rem;
@@ -92,6 +114,9 @@ h2 {
 .text p{
   font-size: 20px;
   width: 55%;
+    color: #111;
+  font-family: "lexi";
+   margin-left: 25rem;
 }
 
 .logicels {
@@ -99,62 +124,50 @@ h2 {
 }
 
 .logicels h4{
-  color: #872341;
-  font-family: "amoria";
+  color: #111;
+  font-family: "lexi";
   font-size: 60px;
   text-align: center;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  margin-top: 10rem;
+  
 
 }
 
-.logicels:hover h4:first-child {
-  transform: translateY(32px);
-  color: #09122C;
 
-}
-
-.logicels:hover h4:last-child {
-  transform: translateY(-32px);
-  color: #09122C;
-}
 
 
 
 
 .titre:hover h1:first-child {
   transform: translateY(55px);
-  color: #09122C;
+  color: #111;
 
 }
 
 .titre:hover h1:last-child {
   transform: translateY(-55px);
-  color: #09122C;
+  color: #d6d3cf;
 }
 
-.titre2:hover h2:first-child {
-  transform: translateY(30px);
-  color: #09122C;
-
-}
-
-.titre2:hover h2:last-child {
-  transform: translateY(-35px);
-  color: #09122C;
-}
 
 
 .navbar {
-  display: flex;
-  justify-content: space-evenly;
-  height: 15vh;
+   position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
   align-items: center;
+   list-style: none;
+  font-size: 1.5rem; 
+  background: #4a4c57; /* slightly transparent background */
+  backdrop-filter: blur(8px); /* adds a soft blur effect */
+  z-index: 1000; 
 }
 
-.navbar {
-  list-style: none;
-  font-size: 1.5rem;
-}
+
+
 
 ul {
   display: flex;
@@ -162,19 +175,19 @@ ul {
 }
 
 a {
-  color: #872341;
+  color: #111;
   text-decoration: none;
   text-decoration-color: #09122C;
   font-family: "lexi";
 }
 
 a:hover {
-  color: #09122C;
+  color: #d6d3cf;
   text-decoration: overline;
 }
 
 .description p {
-  color: #872341;
+  color: #111;
   font-family: "lexi";
   font-size: 25px;
 }
@@ -203,10 +216,10 @@ a:hover {
 
 .nom {
   position: absolute;
-  bottom: -70px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
-  color: #872341;
+  color: #111;
   font-family: "lexi";
   font-weight: 600;
   text-align: center;
@@ -245,7 +258,7 @@ a:hover {
   cursor: pointer;
   border-radius: 10px;
   transition: all .5s;
-  border: 5px solid #8d4b5f;
+  border: 5px solid #d6d3cf;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,7 +276,7 @@ a:hover {
   text-align: center;
   transform: rotate(-90deg);
   transition: all .5s;
-  color: #872341;
+  color: #111;
   letter-spacing: .1em;
   font-family: "lexi";
   font-weight: bolder;
@@ -290,7 +303,7 @@ a:hover {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 99%, 50%, 0.25);
+	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 	border-radius: 0.5rem;
 	-ms-overflow-style: none; 
 	scrollbar-width: none; 
@@ -305,7 +318,7 @@ a:hover {
 	flex: 1 0 100%;
 	scroll-snap-align: start;
 	object-fit: cover;
-  filter: sepia(0.5) hue-rotate(-30deg) saturate(1.2) contrast(0.8);
+ 
 }
 
 .slider img:hover{
@@ -326,7 +339,7 @@ a:hover {
 	width: 0.5rem;
 	height: 0.5rem;
 	border-radius: 50%;
-	background-color: #f8f8f8;
+	background-color: #d6d3cf;
 	opacity: 0.75;
 	transition: opacity ease 250ms;
 }
