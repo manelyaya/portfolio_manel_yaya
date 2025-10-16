@@ -154,15 +154,15 @@ h2 {
   color: #111;
   font-family: "lexi";
   font-size: 40px;
-  margin-left: 50rem;
+  margin-left: 50%;
 }
 
 .text p {
   font-size: 20px;
-  width: 55%;
+  width: 40%;
   color: #111;
   font-family: "lexi";
-  margin-left: 25rem;
+  margin-left: 30%;
 }
 
 .logicels {
@@ -258,8 +258,8 @@ a:hover {
 
 .nom {
   position: absolute;
-  bottom: -30px;
-  left: 50%;
+  bottom: 11rem;
+  left: 75%;
   transform: translateX(-50%);
   color: #111;
   font-family: "lexi";
