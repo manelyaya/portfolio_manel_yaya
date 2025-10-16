@@ -16,6 +16,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 0;
+}
+
 .cursor {
   z-index: 999;
   background: #09122C;
@@ -28,11 +32,13 @@ body {
   height: 100%;
   display: grid;
 
+
 }
 
 html {
   height: 100%;
   scroll-behavior: smooth;
+
 }
 
 @keyframes gradient {
@@ -50,29 +56,38 @@ html {
 }
 
 
-.hero{
-   background:
+.hero {
+  background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
     linear-gradient(-45deg, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
   background-size: 400% 400%;
   animation: gradient 25s ease infinite;
+
 }
 
-.projet{
-   background:
+.projet {
+  background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg,#1e1f26, #2a2c34, #3b3d47, #4a4c57);
+    linear-gradient(-45deg, #1e1f26, #2a2c34, #3b3d47, #4a4c57);
   background-size: 400% 400%;
   animation: gradient 25s ease infinite;
+  min-height: 120vh;
+
 }
 
-.part{
-   background:
+.part {
+  background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #faf9f6,  #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+    linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
   background-size: 400% 400%;
   animation: gradient 25s ease infinite;
+  min-height: 80vh;
+  padding: 100px;
+  position: relative;
+  width: 100%;
+
 }
+
 
 
 .titre,
@@ -101,42 +116,37 @@ h2 {
   font-size: 60px;
   text-align: center;
 
- 
+
 }
 
-.text h3{
+.text h3 {
   color: #111;
   font-family: "lexi";
   font-size: 40px;
   margin-left: 50rem;
 }
 
-.text p{
+.text p {
   font-size: 20px;
   width: 55%;
-    color: #111;
+  color: #111;
   font-family: "lexi";
-   margin-left: 25rem;
+  margin-left: 25rem;
 }
 
 .logicels {
   margin: 5rem;
 }
 
-.logicels h4{
+.logicels h4 {
   color: #111;
   font-family: "lexi";
   font-size: 60px;
   text-align: center;
-  margin-top: 10rem;
-  
+  margin-top: 2rem;
+
 
 }
-
-
-
-
-
 
 .titre:hover h1:first-child {
   transform: translateY(55px);
@@ -152,18 +162,19 @@ h2 {
 
 
 .navbar {
-   position: fixed;
-
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 10vh;
   align-items: center;
-   list-style: none;
-  font-size: 1.5rem; 
-  background: #4a4c57; /* slightly transparent background */
-  backdrop-filter: blur(8px); /* adds a soft blur effect */
-  z-index: 1000; 
+  list-style: none;
+  font-size: 1.5rem;
+  background: #262626;
+  /* slightly transparent background */
+  backdrop-filter: blur(8px);
+  /* adds a soft blur effect */
+  z-index: 1000;
 }
 
 
@@ -175,7 +186,7 @@ ul {
 }
 
 a {
-  color: #111;
+  color: #666666;
   text-decoration: none;
   text-decoration-color: #09122C;
   font-family: "lexi";
@@ -288,64 +299,64 @@ a:hover {
 }
 
 .container {
-	padding: 2rem;
+  padding: 2rem;
 }
 
 .slider-wrapper {
-	position: relative;
-	max-width: 60rem;
-	margin: 0 auto;
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto;
 }
 
 .slider {
-	display: flex;
-	aspect-ratio: 16 / 9;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-	border-radius: 0.5rem;
-	-ms-overflow-style: none; 
-	scrollbar-width: none; 
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 
 .slider::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 .slider img {
-	flex: 1 0 100%;
-	scroll-snap-align: start;
-	object-fit: cover;
- 
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+
 }
 
-.slider img:hover{
+.slider img:hover {
   filter: none;
 }
 
 .slider-nav {
-	display: flex;
-	column-gap: 1rem;
-	position: absolute;
-	bottom: 1.25rem;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .slider-nav a {
-	width: 0.5rem;
-	height: 0.5rem;
-	border-radius: 50%;
-	background-color: #d6d3cf;
-	opacity: 0.75;
-	transition: opacity ease 250ms;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #d6d3cf;
+  opacity: 0.75;
+  transition: opacity ease 250ms;
 }
 
 .slider-nav a:hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 
@@ -354,8 +365,10 @@ a:hover {
   0% {
     transform: translateX(0);
   }
+
   100% {
-    transform: translateX(-1250px); /* Move by 5 slides only (half of 10), then loop */
+    transform: translateX(-1250px);
+    /* Move by 5 slides only (half of 10), then loop */
   }
 }
 
@@ -371,7 +384,6 @@ a:hover {
 
 .slider2::before,
 .slider2::after {
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100px;
   position: absolute;
@@ -393,7 +405,8 @@ a:hover {
 
 .slider2 .slide-track {
   display: flex;
-  width: 2500px; /* 10 slides x 250px */
+  width: 2500px;
+  /* 10 slides x 250px */
   animation: scroll 40s linear infinite;
 }
 
@@ -409,3 +422,17 @@ a:hover {
   object-fit: contain;
 }
 
+
+footer {
+  align-items: center;
+  background-color: #262626;
+  bottom: 0;
+  display: flex;
+  font-size: 5em;
+  height: 150px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+
+}
