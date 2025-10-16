@@ -55,14 +55,35 @@ html {
   }
 }
 
+/* Load animation using only temporary transform */
+.titre h1:first-child {
+  animation: loadSlide 0.8s ease;
+}
 
-.hero {
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+.titre h1:last-child {
+  animation: loadSlideReverse 0.8s ease;
+}
 
+/* Load animation */
+.titre h1:first-child {
+  animation: loadSlide 3s ease; /* slower */
+}
+
+.titre h1:last-child {
+  animation: loadSlideReverse 3s ease; /* slower */
+}
+
+/* Keyframes including color */
+@keyframes loadSlide {
+  0% { transform: translateY(0); color: #111; }
+  50% { transform: translateY(55px); color: #111; } /* stays black */
+  100% { transform: translateY(0); color: #111; }   /* back to black */
+}
+
+@keyframes loadSlideReverse {
+  0% { transform: translateY(0); color: #111; }
+  50% { transform: translateY(-55px); color: #d6d3cf; } /* changes color */
+  100% { transform: translateY(0); color: #111; }       /* back to black */
 }
 
 .projet {
@@ -106,7 +127,9 @@ h1 {
   font-family: "amoria";
   font-size: 100px;
   text-align: center;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, color 0.5s ease;
+  
+  
 
 }
 
@@ -257,7 +280,7 @@ a:hover {
   padding: 0.4em;
   margin-left: 25%;
   margin-right: 15%;
-  margin-bottom: 60%;
+  margin-bottom: 100%;
 
 
 }
@@ -435,4 +458,10 @@ footer {
   width: 100%;
   z-index: 1;
 
+}
+
+.imparfaite img{
+    flex: 1 0 100%;
+  scroll-snap-align: start;
+  
 }
