@@ -542,7 +542,7 @@ animation: gradient 25s ease infinite;
   margin-right: auto;
   margin-top: 2.5rem;
  height: 80%;
-  border-top: 5px solid #0e3721;
+  border-top: 5px solid #2a2c34;
 /*   z-index: 1; */
   animation: bounce 1.5s infinite;
 }
@@ -573,7 +573,7 @@ animation: gradient 25s ease infinite;
   color: white;
 }
 .name:hover {
-  border-bottom: 5px solid #0e3721;
+  border-bottom: 5px solid #2a2c34;
   height: 30px;
   width: 380px;
   transition: ease 0.5s;
@@ -585,7 +585,7 @@ animation: gradient 25s ease infinite;
 }
 
 .email:hover {
-  border-bottom: 5px solid #0e3721;
+  border-bottom: 5px solid #2a2c34;
   height: 30px;
   width: 380px;
   transition: ease 0.5s;
@@ -598,7 +598,7 @@ animation: gradient 25s ease infinite;
 }
 
 .message:hover {
-  border-bottom: 5px solid #0e3721;
+  border-bottom: 5px solid #2a2c34;
   height: 12em;
   width: 380px;
   transition: ease 0.5s;
@@ -617,7 +617,7 @@ animation: gradient 25s ease infinite;
 .submit {
   width: 200px;
   color: white;
-  background-color: #0e3721;
+  background-color: #2a2c34;
   font-size: 20px;
 }
 
@@ -625,7 +625,7 @@ animation: gradient 25s ease infinite;
   box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
   transform: translateY(-3px);
   width: 300px;
-  border-top: 5px solid #0e3750;
+ background-color: #0e3721;
   border-radius: 0%;
 }
 
