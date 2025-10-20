@@ -398,7 +398,7 @@ a:hover {
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
-  background-color: #d6d3cf;
+  background-color: #fcfcfc;
   opacity: 0.75;
   transition: opacity ease 250ms;
 }
@@ -638,3 +638,7 @@ animation: gradient 25s ease infinite;
   }
 } 
 
+.footer-content{
+  font-size: 20%;
+  color: white;
+}
