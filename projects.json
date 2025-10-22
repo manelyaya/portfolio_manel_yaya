@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "title": "imparfaite",
+      "category": "vidéo",
+      "images": ["./photos/imparfaite.png"]
+      
+    },
+    {
+      "id": 2,
+      "title": "monde a l'envers",
+      "category": "video, 3d",
+      "images": [
+          "./photos/Monde.png",
+          "./chemin/vers/votre/img2-2.jpg",
+          "./chemin/vers/votre/img2-3.jpg"
+          ]
+      
+    },
+     {
+        "id": 1,
+        "title": "monde inconnu",
+        "category": "vidéo",
+        "images": ["./photos/monde_inconnu.png"]
+        
+      }
+  ]
