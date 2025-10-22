@@ -1,59 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projets</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="javascript.js"></script>
 </head>
 <body>
     <section class="hero">
-    <nav id="desktop-nav">
-        <div>
-            <ul class="navbar">
-                <li><a href="./index.html">MY</a></li>
-                <li><a href="./projet.html">PROJETS</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
+        <nav id="desktop-nav">
+            <div>
+                <ul class="navbar">
+                    <li><a href="./index.html">MY</a></li>
+                    <li><a href="./projet.html">PROJETS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="card">
+            <p><span><a href="#imparfaite">IMPARFAITE</a></span></p>
+            <p><span><a href="#monde">MONDE A L'ENVERS</a></span></p>
+            <p><span><a href="#inconnu">MONDE INCONNU</a></span></p>
         </div>
-    </nav>
-    <div class="card">
-        <p><span><a href="#imparfaite">IMPARFAITE</a></span></p>
-        <p><span><a href="#monde">MONDE A L'ENVERS</a></span></p>
-        <p><span>  <a href="#inconnu">MONDE INCONNU</a></span></p>
-    </div>
     </section>
 
     <section id="imparfaite">
         <h1 class="titre1">IMPARFAITE</h1>
- <img src="./photos/imparfaite.png" alt="photo du projet">
+        <img src="./photos/imparfaite.png" alt="photo du projet" />
+        <p id="desc-imparfaite"></p> <!-- Description dynamique ici -->
     </section>
 
-
-      <section id="monde">
+    <section id="monde">
         <h1 class="titre1">UN MONDE A L'ENVERS</h1>
- <img src="./photos/Monde.png" alt="photo du projet">
+        <img src="./photos/Monde.png" alt="photo du projet" />
+        <p id="desc-monde"></p> <!-- Description dynamique ici -->
     </section>
 
     <section id="inconnu">
         <h1 class="titre1">UN MONDE INCONNU</h1>
- <img src="./photos/monde_inconnu.png" alt="photo du projet">
+        <img src="./photos/monde_inconnu.png" alt="photo du projet" />
+        <p id="desc-inconnu"></p> <!-- Description dynamique ici -->
     </section>
-      
-<footer class="fixed-footer">
-    <div class="footer-content">
-        <p>Manel Yaya</p>
-        <p>(541) 609-3627 </p>
-        <p>manelyaya4@gmail.com</a></p>
-    
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-          <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
-          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        </div>
-      </div>
-</footer>
 
+    <footer class="fixed-footer">
+        <div class="footer-content">
+            <p>Manel Yaya</p>
+            <p>(541) 609-3627 </p>
+            <p>manelyaya4@gmail.com</p>
+
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+                <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Div pour monter l'app Vue (cachée) -->
+    <div id="vue-projects" style="display:none;"></div>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="vue.js"></script> <!-- Ton script Vue -->
 </body>
 </html>

@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="javascript.js"></script>
 </head>
@@ -18,7 +16,7 @@
             <ul class="navbar" >
                 <li><a href="./index.html">MY</a></li>
                 <li><a href="./projet.html">PROJETS</a></li>
-                <li><a href="./contact.html">CONTACT</a></li>
+                <li ><a href="./contact.html">CONTACT</a></li>
             </ul>
         </div>
     </nav>
@@ -40,7 +38,7 @@
         <h1>MANEL YAYA</h1>
     </div>
 
-    <section id="profile">
+    <div id="profile">
         <div class="description">
             <p>Je m’appelle Manel Yaya, passionnée par le cinéma, le montage vidéo et l’art visuel. Curieuse et
                 créative,
@@ -57,7 +55,7 @@
 
         </div>
 
-    </section>
+      </div>
 
     </section>
 
@@ -68,29 +66,34 @@
    
 
 
-    <section class="container">
+    <div id="vue-app">
+      <section class="container">
         <div class="slider-wrapper">
-            <div class="slider">
-                <img id="slide-1" src="./photos/imparfaite.png"
-                    alt="3D rendering of an imaginary orange planet in space" />
-                <img id="slide-2" src="./photos/Monde.png" alt="3D rendering of an imaginary green planet in space" />
-                <img id="slide-3" src="./photos/monde_inconnu.png"
-                    alt="3D rendering of an imaginary blue planet in space" />
-            </div>
-            <div class="slider-nav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-            </div>
+          <div class="slider">
+            <img
+              v-for="(project, index) in projects"
+              :id="`slide-${index + 1}`"
+              :key="project.id"
+              :src="project.images[0]"
+              :alt="project.title"
+            />
+          </div>
+          <div class="slider-nav">
+            <a
+              v-for="(project, index) in projects"
+              :key="project.id"
+              :href="`#slide-${index + 1}`"
+            ></a>
+          </div>
         </div>
-    </section>
-    <div class="text">
-        <h3>Titre</h3>
-        <p>Je m’appelle Manel Yaya, passionnée par le cinéma, le montage vidéo et l’art visuel. Curieuse et créative,
-            j’aime transformer des idées en projets concrets. Mon objectif est de continuer à développer mes
-            connaissances et de collaborer à des projets innovants qui allient créativité, technologie et art.</p>
+      </section>
+    
+      <div class="text">
+        <h3>{{ currentProject.title || 'Titre' }}</h3>
+        <p>{{ currentProject.description || 'Description par défaut...' }}</p>
+      </div>
     </div>
-    </section>
+    
 
     <section class="part">
     <div class="logicels">
@@ -153,7 +156,11 @@
 
 </footer>
     
+<!-- Vue.js (version CDN) -->
+<script src="https://unpkg.com/vue@3"></script>
 
+<!-- Ton fichier Vue.js qui contient l'app Vue -->
+<script src="./vue.js"></script>
 </body>
 
 </html>
