@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Vérifie si on est sur la page d'accueil (carrousel)
     const vueApp = document.querySelector('#vue-app');
     const vueProjects = document.querySelector('#vue-projects');
+    const vueMode = document.querySelector('#app');
   
     if (vueApp) {
       // === APP 1 : Carrousel sur la page d'accueil ===
@@ -63,4 +64,24 @@ document.addEventListener('DOMContentLoaded', () => {
       projectApp.mount('#vue-projects');
     }
   });
-  
+
+
+  if (app) {
+  const { createApp } = Vue;
+ 
+createApp({
+  data() {
+    return {
+      isDarkMode: false
+    };
+  },
+  methods: {
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode;
+ 
+      // Ajoute ou retire la classe sur le body
+      document.body.classList.toggle('dark-mode', this.isDarkMode);
+    }
+  }
+}).mount('#app');
+  }

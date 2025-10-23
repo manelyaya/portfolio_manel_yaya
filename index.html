@@ -17,8 +17,17 @@
                 <li><a href="./index.html">MY</a></li>
                 <li><a href="./projet.html">PROJETS</a></li>
                 <li ><a href="./contact.html">CONTACT</a></li>
+                <div id="app" :class="{'dark-mode': isDarkMode}">
+                <!-- Bouton Dark/Light Mode -->
+        <a href="#"
+        class="mode-btn"
+        @click.prevent="toggleDarkMode">
+       {{ isDarkMode ? 'Light MØde' : 'Dark MØde' }}
+     </a>
+     <div class="mode-overlay" :class="{'active': isDarkMode}"></div>
+    </div>
             </ul>
-        </div>
+      </div>
     </nav>
 
     <!-- nav id="hamburger-nav">
@@ -153,7 +162,6 @@
       <a href="https://github.com/yourusername" target="_blank">GitHub</a>
     </div>
   </div>
-
 </footer>
     
 <!-- Vue.js (version CDN) -->
