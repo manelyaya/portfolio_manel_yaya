@@ -64,7 +64,8 @@ function animateFrom(elem, direction) {
   }
   
 
-  const fancyPantsSplit = SplitText.create(".fancyPants", { type: "chars, lines"});
+  const fancyPantsSplit = new SplitText(".fancyPants", { type: "chars, lines" });
+
 
 const fancyPantsAni = gsap.timeline()
 
