@@ -86,6 +86,12 @@ html {
   100% { transform: translateY(0); color: #111; }      
 }
 
+.gs_reveal {
+  opacity: 0;               /* hidden */
+  transform: translateY(50px); /* optional start position */
+  will-change: transform, opacity; /* optimize animation */
+}
+
 
 
 .hero, .contact{
@@ -222,12 +228,33 @@ h2{
 
 .text p {
   font-size: 20px;
-  width: 40%;
+  max-width: 700px;
   color: #ffffff;
   font-family: "lexi";
-  margin-left: 30%;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.5px;
+  padding: 0 1rem; /* adds space on the sides for smaller screens */
 }
+
+/* Tablets */
+@media (max-width: 992px) {
+  .text p {
+    font-size: 18px;
+    max-width: 600px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .text p {
+    font-size: 16px;
+    max-width: 90%; /* allows more width on small screens */
+    line-height: 1.5;
+  }
+}
+
 
 .logicels {
   margin: 5rem;

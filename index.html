@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js"></script>
 </head>
 
 <body>
@@ -42,41 +41,40 @@
 
     
       <section class="hero">
-    <div class="titre load">
+    <div class="titre load ">
         <h1>MANEL YAYA</h1>
         <h1>MANEL YAYA</h1>
+        <h1 class="fancyPants"><span>IN AND OUT</span> WITH MASK</h1>
     </div>
 
-    <div id="profile">
+    <div id="vue-profile">
+      <div id="profile" v-if="profile">
         <div class="description">
-            <p>Je m’appelle Manel Yaya, passionnée par le cinéma, le montage vidéo et l’art visuel. Curieuse et
-                créative,
-                j’aime transformer des idées en projets concrets. Mon objectif est de continuer à développer mes
-                connaissances et de collaborer à des projets innovants qui allient créativité, technologie et art.</p>
+          <p class="gs_reveal">{{ profile.description }}</p>
         </div>
-
-        <div class="camera">
-            <img class="petit" src="./photos/photographer-16022_640.jpg" alt="photo de camera">
-            <!--<img class="grand" src="./photos/photographer-16022_1280.jpg" alt="photo de camera">-->
-            <div class="nom">
-                <p>Manel Yaya</p>
-            </div>
-
+    
+        <div class="camera ">
+          <img class="petit" src="./photos/photographer-16022_640.jpg" alt="photo de camera">
+          <!--<img class="grand" src="./photos/photographer-16022_1280.jpg" alt="photo de camera">-->
+          <div class="nom">
+            <p>Manel Yaya</p>
+          </div>
         </div>
-
       </div>
+    </div>
+    
 
     </section>
 
 <section class="projet">
     <div class="titre2">
-        <h2>PROJETS</h2>
+        <h2 class="gs_reveal">PROJETS</h2>
     </div>
    
 
 
     <div id="vue-app">
-      <section class="container">
+      <section class="container gs_reveal">
         <div class="slider-wrapper">
           <div class="slider">
             <img
@@ -98,18 +96,18 @@
       </section>
     
       <div class="text">
-        <h3>{{ currentProject.title || 'Titre' }}</h3>
-        <p>{{ currentProject.description || 'Description par défaut...' }}</p>
+        <h3 class="gs_reveal">{{ currentProject.title || 'Titre' }}</h3>
+        <p class="gs_reveal">{{ currentProject.description || 'Description par défaut...' }}</p>
       </div>
     </div>
     
 
     <section class="part">
     <div class="logicels">
-        <h4>LOGICIELS</h4>
+        <h4 class="gs_reveal">LOGICIELS</h4>
     </div>
 
-    <div class="slider2">
+    <div class="slider2 gs_reveal">
         <div class="slide-track">
           <div class="slide">
             <img src="./photos/icons8-davinci-resolve-96.png"  alt="" />
@@ -169,6 +167,11 @@
 
 <!-- Ton fichier Vue.js qui contient l'app Vue -->
 <script src="./vue.js"></script>
+<script src="https://unpkg.com/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<!-- Your custom JS -->
+<script src="javascript.js"></script>
+
 </body>
 
 </html>
