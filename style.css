@@ -230,7 +230,6 @@ h2{
 
 
 .navbar {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -238,8 +237,6 @@ h2{
   align-items: center;
   list-style: none;
   font-size: 1.5rem;
-  background: #262626;
-  z-index: 1000;
 }
 
 
@@ -657,7 +654,6 @@ animation: gradient 25s ease infinite;
   justify-content: space-around;
 }
 
-
 #imparfaite p {
   color: #000;
   text-align: justify;        /* clean, even edges on both sides */
@@ -695,3 +691,82 @@ animation: gradient 25s ease infinite;
     line-height: 1.6;
   }
 }
+
+#monde p {
+  color: #000;
+  text-align: justify;        /* clean, even edges on both sides */
+  text-justify: inter-word;   /* improves spacing for justification */
+  max-width: 700px;           /* readable text width on desktop */
+  margin: 1.5rem auto;        /* centers the block horizontally */
+  font-size: 1.1rem;          /* comfortable font size */
+  line-height: 1.8;           /* enough space between lines */
+  padding: 0 1rem;            /* breathing room on small screens */
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 1024px) {
+  #monde p {
+    max-width: 600px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #monde p {
+    max-width: 500px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #monde p {
+    max-width: 90%;         /* use most of the screen width */
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+#inconnu p {
+  color: #000;
+  text-align: justify;        /* clean, even edges on both sides */
+  text-justify: inter-word;   /* improves spacing for justification */
+  max-width: 700px;           /* readable text width on desktop */
+  margin: 1.5rem auto;        /* centers the block horizontally */
+  font-size: 1.1rem;          /* comfortable font size */
+  line-height: 1.8;           /* enough space between lines */
+  padding: 0 1rem;            /* breathing room on small screens */
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 1024px) {
+  #inconnu p {
+    max-width: 600px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #inconnu p {
+    max-width: 500px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #inconnu p {
+    max-width: 90%;         /* use most of the screen width */
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+
+
