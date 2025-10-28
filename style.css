@@ -486,15 +486,13 @@ a:hover {
 
 footer {
   align-items: center;
-  background-color: #262626;
   bottom: 0;
   display: flex;
   font-size: 5em;
-  height: 150px;
   justify-content: center;
-  position: fixed;
   width: 100%;
-  z-index: 1;
+  margin-top: 10vh;
+
 
 }
 
