@@ -74,7 +74,7 @@ height: 100vh;
 .projet {
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #faf9f6, #eeb1e9, #e0957e, #8897ee, #c2b9b9);
+    linear-gradient(-45deg, #1e1f26, #2a2c34, #3b3d47, #4a4c57);
   background-size: 400% 400%;
   animation: gradient 25s ease infinite;
   min-height: 150vh;
@@ -84,7 +84,7 @@ height: 100vh;
 .part {
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #74bee9, #f8f7f3, #6da0e2, #a2bcc7, #ffffff);
+    linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
   background-size: 400% 400%;
   animation: gradient 25s ease infinite;
   min-height: 30%;
@@ -118,7 +118,7 @@ body.dark-mode .projet,
 #app.dark-mode .projet {
   background:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #1e1f26, #2a2c34, #3b3d47, #4a4c57);
+    linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
   background-size: 400% 400%;
   animation: gradient 25s ease infinite;
   color: #000;
@@ -768,5 +768,16 @@ animation: gradient 25s ease infinite;
   }
 }
 
+.circle {
+  --circle-size: 40px;
+  position: fixed;
+  height: var(--circle-size);
+  width: var(--circle-size);
+  border: 1px solid white;
+  border-radius: 100%;
+  top: calc(var(--circle-size) / 2 * -1);
+  left: calc(var(--circle-size) / 2 * -1);
+  pointer-events: none;
+}
 
 
