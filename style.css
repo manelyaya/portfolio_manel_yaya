@@ -658,3 +658,40 @@ animation: gradient 25s ease infinite;
 }
 
 
+#imparfaite p {
+  color: #000;
+  text-align: justify;        /* clean, even edges on both sides */
+  text-justify: inter-word;   /* improves spacing for justification */
+  max-width: 700px;           /* readable text width on desktop */
+  margin: 1.5rem auto;        /* centers the block horizontally */
+  font-size: 1.1rem;          /* comfortable font size */
+  line-height: 1.8;           /* enough space between lines */
+  padding: 0 1rem;            /* breathing room on small screens */
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 1024px) {
+  #imparfaite p {
+    max-width: 600px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #imparfaite p {
+    max-width: 500px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    padding: 0 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #imparfaite p {
+    max-width: 90%;         /* use most of the screen width */
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
