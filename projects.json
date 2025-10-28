@@ -7,22 +7,43 @@
       "id": 1,
       "title": "Imparfaite",
       "category": "vidéo",
+      "course": "Cours de création audiovisuelle",
+      "team": "Projet individuel",
+      "teammates": [],
+      "short_description": "Exploration poétique et visuelle du corps humain à travers la macrophotographie, révélant la beauté dans l’imperfection.",
+      "long_description": "Imparfaite est un projet vidéo qui explore l’intimité du corps humain à travers l’utilisation de la macrophotographie. En s’approchant au plus près de la peau, des textures et des imperfections, nous avons volontairement brouillé les repères visuels habituels pour plonger le spectateur dans une expérience sensorielle intense. Cette proximité extrême permet de révéler ce que l’œil ignore souvent, rendant le corps presque abstrait, vulnérable, mais profondément humain. Le choix de cette approche esthétique vise à transmettre une émotion d’insécurité et de malaise, celle que ressent une jeune fille en conflit avec son image. Par ce regard intime et presque intrusif, le projet cherche à évoquer la fragilité de l’estime de soi, tout en questionnant notre perception de la beauté et de la normalité.",
       "images": ["./photos/imparfaite.png"],
-      "description": "Imparfaite est un projet vidéo qui explore l’intimité du corps humain à travers l’utilisation de la macrophotographie. En s’approchant au plus près de la peau, des textures et des imperfections, nous avons volontairement brouillé les repères visuels habituels pour plonger le spectateur dans une expérience sensorielle intense. Cette proximité extrême permet de révéler ce que l’œil ignore souvent, rendant le corps presque abstrait, vulnérable, mais profondément humain. Le choix de cette approche esthétique vise à transmettre une émotion d’insécurité et de malaise, celle que ressent une jeune fille en conflit avec son image. Par ce regard intime et presque intrusif, le projet cherche à évoquer la fragilité de l’estime de soi, tout en questionnant notre perception de la beauté et de la normalité."
+      "media": [],
+      "role": "Réalisation, tournage et montage vidéo",
+      "tools": ["Premiere Pro", "After Effects", "Appareil photo macro", "Éclairage studio"]
     },
     {
       "id": 2,
       "title": "Monde à l'envers",
       "category": "vidéo, 3D",
+      "course": "Création numérique et effets visuels",
+      "team": "Projet en équipe",
+      "teammates": ["Manel Yaya", "Nom du coéquipier 1", "Nom du coéquipier 2"],
+      "short_description": "Une exploration visuelle et sonore d’un univers psychédélique où les repères de la réalité s’effacent.",
+      "long_description": "Monde à l'envers est une immersion dans un univers parallèle, une représentation visuelle et sensorielle d’une expérience psychédélique. Ce projet cherche à capturer la perception altérée d’un esprit sous l’effet d’une drogue hallucinogène, où les repères de la réalité se dissolvent peu à peu. Grâce à l'utilisation d'animations 3D soigneusement construites, nous avons imaginé un monde abstrait et en constante transformation — reflet des distorsions mentales et émotionnelles vécues dans cet état. Le montage vidéo, combiné à une bande sonore expérimentale, amplifie cette sensation de vertige et de confusion, plongeant le spectateur dans une réalité instable, parfois troublante, mais profondément fascinante. Ce projet interroge la frontière entre rêve, délire et conscience.",
       "images": ["./photos/Monde.png"],
-      "description": "Monde à l'envers est une immersion dans un univers parallèle, une représentation visuelle et sensorielle d’une expérience psychédélique. Ce projet cherche à capturer la perception altérée d’un esprit sous l’effet d’une drogue hallucinogène, où les repères de la réalité se dissolvent peu à peu. Grâce à l'utilisation d'animations 3D soigneusement construites, nous avons imaginé un monde abstrait et en constante transformation — reflet des distorsions mentales et émotionnelles vécues dans cet état. Le montage vidéo, combiné à une bande sonore expérimentale, amplifie cette sensation de vertige et de confusion, plongeant le spectateur dans une réalité instable, parfois troublante, mais profondément fascinante. Ce projet interroge la frontière entre rêve, délire et conscience."
+      "media": [],
+      "role": "Conception 3D, montage et direction artistique",
+      "tools": ["Blender", "Premiere Pro", "Audition", "After Effects"]
     },
     {
       "id": 3,
       "title": "Monde inconnu",
       "category": "vidéo",
+      "course": "Atelier de production audiovisuelle",
+      "team": "Projet en équipe",
+      "teammates": ["Manel Yaya", "Nom du coéquipier 1"],
+      "short_description": "Court-métrage racontant la frontière entre imagination et réalité à travers le regard d’une jeune artiste.",
+      "long_description": "Lisa, une adolescente de 17 ans, se réfugie dans l'art du dessin pour échapper aux tourments de la réalité qui l'assaillent. Chaque jour après les cours, elle se plonge dans sa passion, laissant libre cours à son imagination débordante. Mais son processus créatif est brutalement interrompu par ses sœurs qui l'appellent pour le dîner. Pendant son absence, un objet mystérieux posé sur sa table prend vie et s'aventure dans le monde des humains. Contraint de retrouver sa place avant que Lisa ne revienne, il doit affronter la dure réalité lorsque Lisa revient dans sa chambre.",
       "images": ["./photos/monde_inconnu.png"],
-      "description": "Lisa, une adolescente de 17 ans, se réfugie dans l'art du dessin pour échapper aux tourments de la réalité qui l'assaillent. Chaque jour après les cours, elle se plonge dans sa passion, laissant libre cours à son imagination débordante. Mais son processus créatif est brutalement interrompu par ses sœurs qui l'appellent pour le dîner. Pendant son absence, un objet mystérieux posé sur sa table prend vie et s'aventure dans le monde des humains. Contraint de retrouver sa place avant que Lisa ne revienne, il doit affronter la dure réalité lorsque Lisa revient dans sa chambre."
+      "media": [],
+      "role": "Scénarisation, direction de la photographie et montage",
+      "tools": ["Premiere Pro", "After Effects", "Caméra Sony A7", "Éclairage LED"]
     }
   ]
 }
