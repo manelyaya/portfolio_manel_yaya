@@ -1,6 +1,6 @@
-// ===============================
-// 🌸 ANIMATION GSAP AU SCROLL
-// ===============================
+
+//  ANIMATION GSAP AU SCROLL
+
 
 // Fonction qui anime les éléments lorsqu’ils apparaissent à l’écran
 function animateFrom(elem, direction = 1) {
@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ===============================
-// ✨ ANIMATION DE TEXTE (SplitText)
-// ===============================
+
+//  ANIMATION DE TEXTE (SplitText)
+
 
 // Découpe le texte en caractères individuels
 const fancyPantsSplit = new SplitText(".fancyPants", { type: "chars, lines" });
