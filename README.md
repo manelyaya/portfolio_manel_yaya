@@ -1,8 +1,10 @@
 ### Manel yaya portfolio
-[Figma]([https://polesynthese.com/repertoire/studio-creatif](https://www.figma.com/design/bqDXBFwHghJ7ciY7HiecKI/manel-yaya-portfolio?node-id=0-1&p=f&t=OtIRnAjMfGHWjead-0))   
-[Trello](https://trello.com/b/6MKksKT7/mon-tableau-trello)   
-https://trello.com/b/6MKksKT7/mon-tableau-trello
-multipage
+[Figma]([https://polesynthese.com/repertoire/studio-creatif](https://www.figma.com/design/bqDXBFwHghJ7ciY7HiecKI/manel-yaya-portfolio?node-id=0-1&p=f&t=OtIRnAjMfGHWjead-0)
+
+[Trello](https://trello.com/b/6MKksKT7/mon-tableau-trello)
+
+multipage 
+
 Caroussel
 
 ## Description du projet
