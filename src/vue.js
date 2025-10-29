@@ -153,3 +153,4 @@ if (vueApp) {
     profileApp.mount('#vue-profile');
   }
 });
+
