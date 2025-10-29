@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projets</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="javascript.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projets</title>
+
+  <!-- Lien vers le même fichier CSS -->
+  <link rel="stylesheet" href="./src/style.css" />
+
+  <!-- Script JS (sera mieux placé à la fin du body pour de meilleures performances) -->
+  <script src="./src/javascript.js"></script>
 </head>
+
 <body>
-    <section class="hero">
-        <nav id="desktop-nav">
-            <div>
-                <ul class="navbar" >
-                    <li><a href="./index.html">MY</a></li>
-                    <li><a href="./projet.html">PROJETS</a></li>
-                    <li ><a href="./contact.html">CONTACT</a></li>
-                    <div id="app" :class="{'dark-mode': isDarkMode}">
-                    <!-- Bouton Dark/Light Mode -->
+
+  <!-- ===================== SECTION HÉRO ===================== -->
+  <section class="hero">
+
+    <!-- ======== BARRE DE NAVIGATION ======== -->
+    <nav id="desktop-nav">
+      <div>
+        <ul class="navbar">
+          <li><a href="./index.html">MY</a></li>
+          <li><a href="./projet.html">PROJETS</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+
+          <!-- Bouton de mode clair/sombre (géré par Vue.js) -->
+          <div id="app" :class="{'dark-mode': isDarkMode}">
             <a href="#"
-            class="mode-btn"
-            @click.prevent="toggleDarkMode">
-           {{ isDarkMode ? 'Light MØde' : 'Dark MØde' }}
-         </a>
-         <div class="mode-overlay" :class="{'active': isDarkMode}"></div>
-        </div>
-                </ul>
+               class="mode-btn"
+               @click.prevent="toggleDarkMode">
+              {{ isDarkMode ? 'Light MØde' : 'Dark MØde' }}
+            </a>
+            <div class="mode-overlay" :class="{'active': isDarkMode}"></div>
           </div>
-        </nav>
-        <div class="card">
-            <p><span><a href="#imparfaite">IMPARFAITE</a></span></p>
-            <p><span><a href="#monde">MONDE A L'ENVERS</a></span></p>
-            <p><span><a href="#inconnu">MONDE INCONNU</a></span></p>
-        </div>
-    </section>
+        </ul>
+      </div>
+    </nav>
 
-    <section id="vue-projects">
-  <!-- Projet 1 -->
-  <section id="imparfaite" v-if="projects.length > 0">
-    <h1 class="titre1">{{ projects[0].title.toUpperCase() }}</h1>
-    <img :src="projects[0].images[0]" alt="photo du projet Imparfaite" />
-    <h3>{{ projects[0].team }}</h3>
-    <p><strong>Cours :</strong> {{ projects[0].course }}</p>
-    <p><strong>Rôle :</strong> {{ projects[0].role }}</p>
-    <p><strong>Logiciels :</strong> {{ projects[0].tools.join(', ') }}</p>
-    <p><strong>Description courte :</strong> {{ projects[0].short_description }}</p>
-    <p><strong>Description longue :</strong> {{ projects[0].long_description }}</p>
+    <!-- ======== CARTES DE LIENS VERS LES PROJETS ======== -->
+    <div class="card">
+      <p><span><a href="#imparfaite">IMPARFAITE</a></span></p>
+      <p><span><a href="#monde">MONDE À L'ENVERS</a></span></p>
+      <p><span><a href="#inconnu">MONDE INCONNU</a></span></p>
+    </div>
   </section>
 
-  <!-- Projet 2 -->
-  <section id="monde" v-if="projects.length > 1">
-    <h1 class="titre1">{{ projects[1].title.toUpperCase() }}</h1>
-    <img :src="projects[1].images[0]" alt="photo du projet Monde à l'envers" />
-    <h3>{{ projects[1].team }}</h3>
-    <p><strong>Cours :</strong> {{ projects[1].course }}</p>
-    <p><strong>Rôle :</strong> {{ projects[1].role }}</p>
-    <p><strong>Logiciels :</strong> {{ projects[1].tools.join(', ') }}</p>
-    <p><strong>Description courte :</strong> {{ projects[1].short_description }}</p>
-    <p><strong>Description longue :</strong> {{ projects[1].long_description }}</p>
-  </section>
+  <!-- ===================== SECTION DES PROJETS (gérée par Vue.js) ===================== -->
+  <section id="vue-projects">
 
-  <!-- Projet 3 -->
-  <section id="inconnu" v-if="projects.length > 2">
-    <h1 class="titre1">{{ projects[2].title.toUpperCase() }}</h1>
-    <img :src="projects[2].images[0]" alt="photo du projet Monde inconnu" />
-    <h3>{{ projects[2].team }}</h3>
-    <p><strong>Cours :</strong> {{ projects[2].course }}</p>
-    <p><strong>Rôle :</strong> {{ projects[2].role }}</p>
-    <p><strong>Logiciels :</strong> {{ projects[2].tools.join(', ') }}</p>
-    <p><strong>Description courte :</strong> {{ projects[2].short_description }}</p>
-    <p><strong>Description longue :</strong> {{ projects[2].long_description }}</p>
-    
-    <footer class="fixed-footer">
+    <!-- ======== PROJET 1 ======== -->
+    <div id="imparfaite" v-if="projects.length > 0">
+      <h1 class="titre1">{{ projects[0].title.toUpperCase() }}</h1>
+      <img :src="projects[0].images[0]" alt="photo du projet Imparfaite" />
+      <h3>{{ projects[0].team }}</h3>
+      <p><strong>Cours :</strong> {{ projects[0].course }}</p>
+      <p><strong>Rôle :</strong> {{ projects[0].role }}</p>
+      <p><strong>Logiciels :</strong> {{ projects[0].tools.join(', ') }}</p>
+      <p><strong>Description courte :</strong> {{ projects[0].short_description }}</p>
+      <p><strong>Description longue :</strong> {{ projects[0].long_description }}</p>
+    </div>
+
+    <!-- ======== PROJET 2 ======== -->
+    <div id="monde" v-if="projects.length > 1">
+      <h1 class="titre1">{{ projects[1].title.toUpperCase() }}</h1>
+      <img :src="projects[1].images[0]" alt="photo du projet Monde à l'envers" />
+      <h3>{{ projects[1].team }}</h3>
+      <p><strong>Cours :</strong> {{ projects[1].course }}</p>
+      <p><strong>Rôle :</strong> {{ projects[1].role }}</p>
+      <p><strong>Logiciels :</strong> {{ projects[1].tools.join(', ') }}</p>
+      <p><strong>Description courte :</strong> {{ projects[1].short_description }}</p>
+      <p><strong>Description longue :</strong> {{ projects[1].long_description }}</p>
+    </div>
+
+    <!-- ======== PROJET 3 ======== -->
+    <div id="inconnu" v-if="projects.length > 2">
+      <h1 class="titre1">{{ projects[2].title.toUpperCase() }}</h1>
+      <img :src="projects[2].images[0]" alt="photo du projet Monde inconnu" />
+      <h3>{{ projects[2].team }}</h3>
+      <p><strong>Cours :</strong> {{ projects[2].course }}</p>
+      <p><strong>Rôle :</strong> {{ projects[2].role }}</p>
+      <p><strong>Logiciels :</strong> {{ projects[2].tools.join(', ') }}</p>
+      <p><strong>Description courte :</strong> {{ projects[2].short_description }}</p>
+      <p><strong>Description longue :</strong> {{ projects[2].long_description }}</p>
+
+      <!-- ======== PIED DE PAGE ======== -->
+      <footer class="fixed-footer">
         <div class="footer-content">
-            <p>Manel Yaya</p>
-            <p>manelyaya4@gmail.com</p>
+          <p>Manel Yaya</p>
+          <p>manelyaya4@gmail.com</p>
 
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-                <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            </div>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
+            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+          </div>
         </div>
-    </footer>
+      </footer>
+    </div>
+
   </section>
-</section>
 
+  <!-- Div Vue cachée (inutile sauf si tu la montes dynamiquement ailleurs) -->
+  <div id="vue-projects" style="display:none;"></div>
 
-
-    <!-- Div pour monter l'app Vue (cachée) -->
-    <div id="vue-projects" style="display:none;"></div>
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="vue.js"></script> <!-- Ton script Vue -->
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="./src/vue.js"></script>
 </body>
 </html>

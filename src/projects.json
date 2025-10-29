@@ -1,0 +1,78 @@
+{
+  "profile": {
+    "description": "Je m’appelle Manel Yaya, passionnée par le cinéma, le montage vidéo et l’art visuel. Curieuse et créative, j’aime transformer des idées en projets concrets. Mon objectif est de continuer à développer mes connaissances et de collaborer à des projets innovants qui allient créativité, technologie et art.",
+    "images": [
+        "./photos/imparfaite.png"
+      ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Imparfaite",
+      "category": "vidéo",
+      "images": [
+        "./photos/imparfaite.png"
+      ],
+      "description": "Imparfaite est un projet vidéo qui explore l’intimité du corps humain à travers l’utilisation de la macrophotographie. En s’approchant au plus près de la peau, des textures et des imperfections, nous avons volontairement brouillé les repères visuels habituels pour plonger le spectateur dans une expérience sensorielle intense. Cette proximité extrême permet de révéler ce que l’œil ignore souvent, rendant le corps presque abstrait, vulnérable, mais profondément humain. Le choix de cette approche esthétique vise à transmettre une émotion d’insécurité et de malaise, celle que ressent une jeune fille en conflit avec son image. Par ce regard intime et presque intrusif, le projet cherche à évoquer la fragilité de l’estime de soi, tout en questionnant notre perception de la beauté et de la normalité.",
+      "course": "Cours de création audiovisuelle",
+      "team": "Projet individuel",
+      "teammates": [],
+      "short_description": "Exploration visuelle du corps humain à travers la macrophotographie, révélant la beauté dans l’imperfection.",
+      "long_description": "Ce projet avait pour objectif d’expérimenter la macrophotographie afin de créer un court film centré sur les émotions visuelles. J’ai choisi d’explorer la thématique du corps et de l’acceptation de soi, en m’approchant au plus près de la peau pour en révéler les détails. L’idée était de transformer les imperfections en formes abstraites et sensibles, tout en jouant sur la lumière et la texture. Le rendu final dépasse les attentes initiales du projet en proposant une expérience presque sensorielle et introspective.",
+      "media": [],
+      "role": "Réalisation, tournage et montage vidéo",
+      "tools": ["Premiere Pro", "After Effects", "Appareil photo macro", "Éclairage studio"]
+    },
+    {
+      "id": 2,
+      "title": "Monde à l'envers",
+      "category": "vidéo, 3D",
+      "images": [
+        "./photos/Monde.png"
+      ],
+      "description": "Monde à l'envers est une immersion dans un univers parallèle, une représentation visuelle et sensorielle d’une expérience psychédélique. Ce projet cherche à capturer la perception altérée d’un esprit sous l’effet d’une drogue hallucinogène, où les repères de la réalité se dissolvent peu à peu. Grâce à l'utilisation d'animations 3D soigneusement construites, nous avons imaginé un monde abstrait et en constante transformation — reflet des distorsions mentales et émotionnelles vécues dans cet état. Le montage vidéo, combiné à une bande sonore expérimentale, amplifie cette sensation de vertige et de confusion, plongeant le spectateur dans une réalité instable, parfois troublante, mais profondément fascinante. Ce projet interroge la frontière entre rêve, délire et conscience.",
+      "course": "Création numérique et effets visuels",
+      "team": "Projet en équipe",
+      "teammates": ["Manel Yaya", "Nom du coéquipier 1", "Nom du coéquipier 2"],
+      "short_description": "Voyage visuel dans un univers psychédélique où les repères de la réalité s’effacent.",
+      "long_description": "Le projet consistait à concevoir une courte vidéo expérimentale intégrant des éléments d’animation 3D pour simuler une perception altérée. Nous avons dépassé le cadre initial en intégrant une bande sonore immersive et des effets visuels évolutifs inspirés des hallucinations sensorielles. Le résultat est une œuvre abstraite qui remet en question la perception de la réalité et explore le subconscient à travers l’image et le son.",
+      "media": [],
+      "role": "Conception 3D, direction artistique, montage vidéo",
+      "tools": ["Blender", "Premiere Pro", "Audition", "After Effects"]
+    },
+    {
+      "id": 3,
+      "title": "Monde inconnu",
+      "category": "vidéo",
+      "images": [
+        "./photos/monde_inconnu.png"
+      ],
+      "description": "Lisa, une adolescente de 17 ans, se réfugie dans l'art du dessin pour échapper aux tourments de la réalité qui l'assaillent. Chaque jour après les cours, elle se plonge dans sa passion, laissant libre cours à son imagination débordante. Mais son processus créatif est brutalement interrompu par ses sœurs qui l'appellent pour le dîner. Pendant son absence, un objet mystérieux posé sur sa table prend vie et s'aventure dans le monde des humains. Contraint de retrouver sa place avant que Lisa ne revienne, il doit affronter la dure réalité lorsque Lisa revient dans sa chambre.",
+      "course": "Atelier de production audiovisuelle",
+      "team": "Projet en équipe",
+      "teammates": ["Manel Yaya", "Nom du coéquipier 1"],
+      "short_description": "Court-métrage sur la frontière entre imagination et réalité à travers le regard d’une jeune artiste.",
+      "long_description": "Ce projet consistait à réaliser un court-métrage narratif mettant en avant un objet animé par l’imagination d’une jeune fille. Nous devions explorer les techniques de narration visuelle et de mise en scène. J’ai participé à la scénarisation, au tournage et à la direction photo, tout en veillant à exprimer la dualité entre le monde réel et celui de l’imaginaire. Le résultat final se distingue par son ton poétique et son attention portée aux émotions et à la lumière.",
+      "media": [],
+      "role": "Scénarisation, direction de la photographie et montage",
+      "tools": ["Premiere Pro", "After Effects", "Caméra Sony A7", "Éclairage LED"]
+    },
+    {
+      "id": 4,
+      "title": "Pixar",
+      "category": "vidéo, 3D",
+      "images": [
+        "./photos/pixar.png"
+      ],
+      "description": "Le projet Pixar propose une réinterprétation créative de l’animation d’introduction emblématique des studios Pixar. La lampe emblématique est remplacée par un bonbon animé, apportant une touche ludique et originale à la scène. Le projet met en avant la personnalité et le mouvement d’un objet du quotidien, tout en conservant l’esprit joyeux et emblématique de l’animation originale.",
+      "course": "Animation 3D",
+      "team": "Projet individuel",
+      "teammates": ["Manel Yaya"],
+      "short_description": "Pixar est un projet qui a pour intention de recréer et de réimaginer de manière créative la célèbre animation de Pixar.",
+      "long_description": "e projet Pixar consiste en une réinterprétation créative de l’introduction emblématique des studios Pixar. La scène a été modélisée dans Maya, incluant le bonbon principal et les lettres, puis animée à l’aide d’un rig simple pour reproduire des mouvements fluides et expressifs. La colorisation et les textures apportent vivacité et réalisme, tandis que le montage dans DaVinci Resolve, avec intégration de la musique, recrée le dynamisme et l’ambiance de l’animation originale tout en ajoutant une touche ludique et originale.",
+      "media": [],
+      "role": "animation, montage",
+      "tools": ["Maya, Davinci Resolve"]
+    }
+  ]
+}

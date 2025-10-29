@@ -2,48 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+
+  <!-- Lien vers le fichier CSS principal -->
+  <link rel="stylesheet" href="./src/style.css">
 </head>
 
 <body>
-   <!-- Premiere section -->
-      <section class="hero">
-         <!-- bar de navigation -->
-         <nav id="desktop-nav">
-        <div>
-            <ul class="navbar" >
-                <li><a href="./index.html">MY</a></li>
-                <li><a href="./projet.html">PROJETS</a></li>
-                <li ><a href="./contact.html">CONTACT</a></li>
-                <div id="app" :class="{'dark-mode': isDarkMode}">
-                <!-- Bouton Dark/Light Mode -->
-        <a href="#"
-        class="mode-btn"
-        @click.prevent="toggleDarkMode">
-       {{ isDarkMode ? 'light' : 'dark' }}
-     </a>
-     <div class="mode-overlay" :class="{'active': isDarkMode}"></div>
-    </div>
-            </ul>
+
+  <!-- ===================== SECTION D'ACCUEIL (HÉRO) ===================== -->
+  <section class="hero">
+
+    <!-- ======== BARRE DE NAVIGATION ======== -->
+    <nav id="desktop-nav">
+        <ul class="navbar">
+          <li><a href="./index.html">MY</a></li>
+          <li><a href="./projet.html">PROJETS</a></li>
+          <li><a href="./contact.html">CONTACT</a></li>
+
+          <!-- Mode sombre / clair (géré par Vue.js) -->
+          <div id="app" :class="{'dark-mode': isDarkMode}">
+            <a href="#"
+              class="mode-btn"
+              @click.prevent="toggleDarkMode">
+              {{ isDarkMode ? 'light' : 'dark' }}
+            </a>
+            <div class="mode-overlay" :class="{'active': isDarkMode}"></div>
+          </div>
+        </ul>
       </div>
     </nav>
 
-     <!-- animation titre-->
-    <div class="titre load ">
-         <h1 class="fancyPants"><span>MANEL</span>YAYA</h1>
+    <!-- ======== ANIMATION DU TITRE ======== -->
+    <div class="titre">
+      <h1 class="fancyPants"><span>MANEL</span>YAYA</h1>
     </div>
 
- <!-- Description et photo -->
+    <!-- ======== DESCRIPTION ET PHOTO ======== -->
     <div id="vue-profile">
       <div id="profile" v-if="profile">
+
+        <!-- Texte de description (chargé dynamiquement par Vue.js) -->
         <div class="description">
           <p class="gs_reveal">{{ profile.description }}</p>
         </div>
-    
-        <div class="camera ">
+
+        <!-- Photo + Nom -->
+        <div class="camera">
           <img class="petit" src="./photos/photographer-16022_640.jpg" alt="photo de camera">
           <div class="nom">
             <p>Manel Yaya</p>
@@ -51,21 +58,24 @@
         </div>
       </div>
     </div>
-    
 
-    </section>
+  </section>
 
-<section class="projet">
-    <div class="titre2">
-        <h2 class="gs_reveal">PROJETS</h2>
-    </div>
 
-     <!--<h1 class="fancyPants"><span>MANEL</span>YAYA</h1>-->
+  <!-- ===================== SECTION PROJETS ===================== -->
+  <section class="projet">
 
+    <!-- ======== TITRE DE SECTION ======== -->
+   
+      <h2 class="gs_reveal">PROJETS</h2>
+   
+
+    <!-- ======== GALERIE DE PROJETS (SLIDER) ======== -->
     <div id="vue-app">
       <section class="container gs_reveal">
         <div class="slider-wrapper">
           <div class="slider">
+            <!-- Boucle Vue.js pour afficher les images des projets -->
             <img
               v-for="(project, index) in projects"
               :id="`slide-${index + 1}`"
@@ -74,97 +84,86 @@
               :alt="project.title"
             />
           </div>
+
+          <!-- Petits boutons de navigation du slider -->
           <div class="slider-nav">
             <a
               v-for="(project, index) in projects"
               :key="project.id"
-              :href="`#slide-${index + 1}`"
-            ></a>
+              :href="`#slide-${index + 1}`">
+            </a>
           </div>
         </div>
       </section>
-    
+
+      <!-- Texte dynamique selon le projet sélectionné -->
       <div class="text">
         <h3 class="gs_reveal">{{ currentProject.title || 'Titre' }}</h3>
         <p class="gs_reveal">{{ currentProject.description || 'Description par défaut...' }}</p>
       </div>
     </div>
+
+
+    <!-- ===================== SECTION LOGICIELS ===================== -->
+    <section class="part">
+
+      <!-- Titre -->
+      <div class="logicels">
+        <h4 class="gs_reveal">LOGICIELS</h4>
+      </div>
+
+      <!-- Slider horizontal des icônes de logiciels -->
+      <div class="slider2 gs_reveal">
+        <div class="slide-track">
+
+          <!-- Première série d’icônes -->
+          <div class="slide"><img src="./photos/icons8-davinci-resolve-96.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-reaper-96.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-blender-100.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-photoshop-96.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-vs-code-96.png" alt=""></div>
+
     
 
-    <section class="part">
-    <div class="logicels">
-        <h4 class="gs_reveal">LOGICIELS</h4>
-    </div>
-
-    <div class="slider2 gs_reveal">
-        <div class="slide-track">
-          <div class="slide">
-            <img src="./photos/icons8-davinci-resolve-96.png"  alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-reaper-96.png"  alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-blender-100.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-photoshop-96.png" alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-vs-code-96.png"  alt="" />
-          </div>
-      
-          <!-- Duplicate starts here -->
-          <div class="slide">
-            <img src="./photos/icons8-davinci-resolve-96.png"  alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-reaper-96.png"  alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-blender-100.png"  alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-photoshop-96.png"  alt="" />
-          </div>
-          <div class="slide">
-            <img src="./photos/icons8-vs-code-96.png"  alt="" />
-          </div>
         </div>
       </div>
+
+      <!-- ======== PIED DE PAGE ======== -->
       <footer class="fixed-footer">
-  <div class="footer-content">
-    <p>Manel Yaya</p>
-    <p>manelyaya4@gmail.com</a></p>
+        <div class="footer-content">
+          <p>Manel Yaya</p>
+          <p>manelyaya4@gmail.com</p>
+
+          <!-- Liens vers réseaux sociaux -->
+          <div class="socials">
+           <p><a href="mailto:manelyaya4@gmail.com">manelyaya4@gmail.com</a></p>
+
+          </div>
+        </div>
+      </footer>
+
+    </section>
+
+  </section>
+
+  <!-- Cercle animé curseur -->
+  <div class="circle"></div>
 
 
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-    </div>
-  </div>
-</footer>
-      </section>
+  <!-- ===================== SCRIPTS ===================== -->
+  <!-- Vue.js (version CDN) -->
+  <script src="https://unpkg.com/vue@3"></script>
 
+  <!-- Script Vue.js de ton projet -->
+  <script src="./src/vue.js"></script>
 
-      
-      <div class="circle"></div>
+  <!-- GSAP (animations) -->
+  <script src="https://unpkg.com/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
 
-
-
-    
-<!-- Vue.js (version CDN) -->
-<script src="https://unpkg.com/vue@3"></script>
-
-<!-- Ton fichier Vue.js qui contient l'app Vue -->
-<script src="./vue.js"></script>
-<script src="https://unpkg.com/gsap@3.13.0/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-<script src="https://assets.codepen.io/16327/SplitText3.min.js"></script> <!-- SplitText plugin -->
-<!-- Your custom JS -->
-<script src="javascript.js"></script>
+  <!-- Ton script JS personnalisé -->
+  <script src="./src/javascript.js"></script>
 
 </body>
-
 </html>
