@@ -1,82 +1,76 @@
+/* ===================== FONTS ===================== */
+/* Police personnalisée "amoria" */
 @font-face {
   src: url("./typo/AMORIA.otf") format("opentype");
   font-family: "amoria";
 }
 
+/* Police "lexi" avec italique et variable weight */
 @font-face {
   font-family: 'lexi';
   src: url('./typo/EBGaramond-Italic-VariableFont_wght.ttf') format('truetype'),
     url('./typo/EBGaramond-VariableFont_wght.ttf') format('truetype');
 }
 
-
+/* ===================== RESET & GLOBAL ===================== */
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  
+  margin: 0px;          /* supprime marges par défaut */
+  padding: 0px;         /* supprime padding par défaut */
+  box-sizing: border-box; /* inclut padding et border dans la largeur */
 }
 
 *:focus {
-  outline: 0;
+  outline: 0;           /* supprime le contour sur focus */
 }
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* prevents horizontal scroll */
-   scroll-behavior: smooth;
+  overflow-x: hidden;    /* empêche le scroll horizontal */
+  scroll-behavior: smooth; /* scroll fluide pour ancres */
 }
 
+/* BODY - layout général et background animé */
 body {
-  display: block; /* grid can sometimes cause issues on small screens */
-  min-height: 100vh; /* ensures body fills the viewport */
+  display: block;       /* grid peut poser problème sur mobile */
+  min-height: 100vh;    /* remplit toujours le viewport */
   background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
-  background-size: 450% 450%;
-  animation: gradient 20s ease infinite;
+  background-size: 450% 450%; /* taille du dégradé pour animation */
+  animation: gradient 20s ease infinite; /* animation continue du dégradé */
 }
 
+/* Mobile : réduit la taille du background pour performance */
 @media (max-width: 600px) {
   body {
     background-size: 300% 300%;
   }
 }
 
-
+/* Animation du gradient */
 @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* GSAP animation reveal styles */
 .gs_reveal {
-  opacity: 0;
-  visibility: hidden;
-  will-change: transform, opacity;
+  opacity: 0;                 /* invisible par défaut */
+  visibility: hidden;         /* invisible et non interactif */
+  will-change: transform, opacity; /* optimisation pour animation */
 }
-
-
 
 /* ===================== DARK MODE ===================== */
 body.dark-mode {
   background: linear-gradient(-45deg, #2c2d2d, #414142, #686866, #acaba7);
   background-size: 300% 300%;
   animation: gradient 20s ease infinite;
-  color: #f1f1f1; /* texte global en blanc */
+  color: #f1f1f1;             /* texte global blanc */
   transition: gradient 0.5s ease, color 0.5s ease;
 }
 
-/* Texte des liens de la navbar en blanc */
+/* Navbar liens en dark mode */
 body.dark-mode .navbar a {
   color: #ffffff;
 }
@@ -84,11 +78,12 @@ body.dark-mode .navbar a:hover {
   color: #d6d3cf;
 }
 
-/* Texte des paragraphes à l'intérieur des cartes devient blanc */
+/* Texte des cartes en dark mode */
 body.dark-mode .card a {
   color: #ffffff;
 }
 
+/* Overlay sombre pour dark mode */
 .mode-overlay {
   position: fixed;
   top: 0;
@@ -97,7 +92,7 @@ body.dark-mode .card a {
   height: 100%;
   background: #000000;
   opacity: 0;
-  pointer-events: none;
+  pointer-events: none;        /* non interactif */
   transition: opacity 0.5s ease-in-out;
   z-index: 999;
 }
@@ -106,27 +101,24 @@ body.dark-mode .card a {
   opacity: 0.2; 
 }
 
-
+/* ===================== TITRES ===================== */
 .titre1 {
   color: #111;
   font-family: "lexi";
   font-size: 60px;
   text-align: center;
-  margin-top: 100px; /* <-- ajoute de l’espace au-dessus du texte */
+  margin-top: 100px; /* espace au-dessus */
 }
 
-.titre{
-  margin-top: 30vh;
+.titre {
+  margin-top: 30vh; /* décalage vertical */
 }
-
 
 h1 {
   color: #111;
   font-family: "amoria";
-  font-size: clamp(30px, 5vw, 100px);
+  font-size: clamp(30px, 5vw, 100px); /* responsive font size */
   text-align: center;
- 
-
 }
 
 h2 {
@@ -134,34 +126,33 @@ h2 {
   font-family: "lexi";
   font-size: 60px;
   text-align: center;
-  margin-top: 120px; /* <-- ajoute de l’espace au-dessus du texte */
+  margin-top: 120px; /* espace au-dessus */
 }
 
-
-
+/* ===================== TEXT BLOCKS ===================== */
 .text {
-  width: 90%;               /* responsive width */
-  max-width: 700px;         /* keeps it from being too wide on large screens */
-  min-height: 220px;        /* ensures container doesn’t shrink when text changes */
-  margin: 2rem auto;        /* vertical spacing + center horizontally */
+  width: 90%;               /* largeur responsive */
+  max-width: 700px;         /* limite largeur sur grand écran */
+  min-height: 220px;        /* empêche rétrécissement */
+  margin: 2rem auto;        /* centrage + espacement vertical */
   display: flex;
   flex-direction: column;
-  align-items: center;      /* center horizontally */
-  justify-content: center;  /* center vertically */
+  align-items: center;      /* centre horizontal */
+  justify-content: center;  /* centre vertical */
   text-align: center;
-  padding: 0 1rem;          /* padding for smaller screens */
-  box-sizing: border-box;   /* include padding in width */
+  padding: 0 1rem;          /* padding pour petits écrans */
+  box-sizing: border-box;   /* inclut padding dans width */
 }
 
 .text h3 {
   color: #111;
   font-family: "lexi";
-  font-size: clamp(1.5rem, 4vw, 2.5rem); /* responsive font size */
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* taille responsive */
   margin: 0 0 1rem 0;
 }
 
 .text p {
-  font-size: clamp(1rem, 2.5vw, 1.25rem); /* responsive font size */
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* taille responsive */
   max-width: 100%;
   color: #111;
   font-family: "lexi";
@@ -169,7 +160,6 @@ h2 {
   letter-spacing: 0.5px;
   margin: 0;
 }
-
 
 /* Tablets */
 @media (max-width: 992px) {
@@ -183,48 +173,43 @@ h2 {
 @media (max-width: 600px) {
   .text p {
     font-size: 16px;
-    max-width: 90%; /* allows more width on small screens */
+    max-width: 90%; /* permet plus de largeur sur petits écrans */
     line-height: 1.5;
   }
 }
 
-
+/* ===================== LOGICIELS ===================== */
 .logicels {
   margin: 5rem;
 }
 
- h4 {
+/* Titre H4 */
+h4 {
   color: #111;
   font-family: "lexi";
   font-size: 60px;
   text-align: center;
   margin-top: 5rem;
-
-
 }
 
-
-
-
-
+/* ===================== NAVBAR ===================== */
 .navbar {
   top: 0;
   left: 0;
   width: 100%;
   height: 10vh;
   align-items: center;
-  list-style: none;
+  list-style: none; /* supprime puces */
   font-size: 1.5rem;
 }
 
-
-
-
+/* UL pour navbar */
 ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; /* espace équitable entre liens */
 }
 
+/* LIENS */
 a {
   color: #666666;
   text-decoration: none;
@@ -237,6 +222,7 @@ a:hover {
   text-decoration: overline;
 }
 
+/* ===================== PROFILE ===================== */
 .description p {
   color: #111;
   font-family: "lexi";
@@ -245,29 +231,29 @@ a:hover {
 
 #profile {
   display: flex;
-  align-items: flex-start;   /* stack neatly on mobile */
+  align-items: flex-start;   /* alignement au top */
   justify-content: space-between;
-  gap: 40px;
-  padding: 2rem;             /* smaller padding for all screens */
-  flex-wrap: wrap;           /* allow items to wrap on smaller screens */
-  max-width: 1200px;         /* optional, limits container width on large screens */
-  margin: 0 auto;            /* center horizontally */
+  gap: 40px;                 /* espace entre éléments */
+  padding: 2rem;             /* padding général */
+  flex-wrap: wrap;           /* permet le wrapping */
+  max-width: 1200px;
+  margin: 0 auto;            /* centrage horizontal */
 }
 
 .description {
-  flex: 1 1 400px;           /* grow/shrink with a min width of 400px */
+  flex: 1 1 400px;           /* grow/shrink + min-width */
   text-align: justify;
   line-height: 1.6;
-  margin-left: 0;            /* remove fixed 20rem margin */
-  min-width: 250px;  
-  margin-top: 40px;        /* ensures text doesn’t get too small */
+  margin-left: 0;
+  min-width: 250px;
+  margin-top: 40px;
 }
 
 .camera {
-  flex: 1 1 300px;           /* grows/shrinks, min width 300px */
-  max-width: 500px;          /* keeps original max width */
+  flex: 1 1 300px;           /* grow/shrink + min-width */
+  max-width: 500px;
   height: auto;
-  margin: 1rem auto;         /* centers on smaller screens */
+  margin: 1rem auto;         /* centrage horizontal */
 }
 
 /* Tablet */
@@ -277,7 +263,7 @@ a:hover {
     padding: 1.5rem;
   }
   .description, .camera {
-    flex: 1 1 100%;           /* stack vertically */
+    flex: 1 1 100%;           /* stack vertical */
     max-width: 100%;
   }
 }
@@ -285,16 +271,16 @@ a:hover {
 /* Mobile */
 @media (max-width: 600px) {
   #profile {
-    flex-direction: column;   /* stack items */
+    flex-direction: column;
     padding: 1rem;
   }
   .description, .camera {
-    margin: 0 auto;           /* center both items */
-    width: 90%;               /* almost full width */
+    margin: 0 auto;
+    width: 90%;
   }
 }
 
-
+/* Nom */
 .nom {
   color: #111;
   font-family: "lexi";
@@ -303,7 +289,7 @@ a:hover {
   font-size: larger;
 }
 
-
+/* Image caméra */
 .camera img {
   width: 100%;
   height: auto;
@@ -313,7 +299,7 @@ a:hover {
   object-fit: fill;
 }
 
-
+/* ===================== CARDS ===================== */
 .card {
   width: 100%;
   height: 100vh;
@@ -322,9 +308,6 @@ a:hover {
   gap: 20px;
   padding: 0.4em;
   margin-left: 0;
-  
-
-
 }
 
 .card p {
@@ -339,21 +322,19 @@ a:hover {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 16px #09122C;
-
 }
 
 @media (max-width: 600px) {
   .card {
-    flex-direction: column;
+    flex-direction: column; /* stack vertical sur mobile */
   }
   .card p:hover {
-    flex: 1; /* don’t expand on mobile */
+    flex: 1; /* disable hover expand on mobile */
   }
 }
 
-
 .card p:hover {
-  flex: 4;
+  flex: 4; /* expansion on hover desktop */
 }
 
 .card p span {
@@ -366,13 +347,13 @@ a:hover {
   letter-spacing: .1em;
   font-family: "lexi";
   font-weight: bolder;
-
 }
 
 .card p:hover span {
-  transform: rotate(0);
+  transform: rotate(0); /* rotation lors du hover */
 }
 
+/* ===================== SLIDERS ===================== */
 .container {
   padding: 2rem;
 }
@@ -391,26 +372,25 @@ a:hover {
   scroll-behavior: smooth;
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   border-radius: 0.5rem;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none; /* IE scrollbar none */
+  scrollbar-width: none;    /* Firefox scrollbar none */
 }
 
-
 .slider::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome scrollbar none */
 }
 
 .slider img {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
-
 }
 
 .slider img:hover {
-  filter: none;
+  filter: none; /* remove hover effect */
 }
 
+/* Navigation slider */
 .slider-nav {
   display: flex;
   column-gap: 1rem;
@@ -434,17 +414,10 @@ a:hover {
   opacity: 1;
 }
 
-
-
+/* ===================== SLIDER2 ===================== */
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-1250px);
-    /* Move by 5 slides only (half of 10), then loop */
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-1250px); /* move 5 slides then loop */ }
 }
 
 .slider2 {
@@ -454,8 +427,8 @@ a:hover {
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 100%;       /* adapt to container */
-  max-width: 960px;  /* limit on large screens */
+  width: 100%;
+  max-width: 960px;
 }
 
 .slider2::before,
@@ -497,7 +470,7 @@ a:hover {
   object-fit: contain;
 }
 
-/* Footer container */
+/* ===================== FOOTER ===================== */
 .fixed-footer {
   width: 100%;
   background-color: #262626;
@@ -509,7 +482,7 @@ a:hover {
   box-sizing: border-box;
 }
 
-/* Make footer stick to bottom if page is short */
+/* Footer sticky bottom */
 body {
   display: flex;
   flex-direction: column;
@@ -518,35 +491,18 @@ body {
 }
 
 main, section {
-  flex: 1; /* push footer to bottom */
+  flex: 1; /* pousse footer vers le bas */
 }
 
-
-
-#imparfaite img{
-display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-
-
-#monde img{
+/* ===================== IMAGES CENTRÉES ===================== */
+#imparfaite img, #monde img, #inconnu img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
-
-#inconnu img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
+/* ===================== FORMULAIRE ===================== */
 .form {
   background: #fff;
   box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
@@ -555,11 +511,11 @@ display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
- height: 60vh;
+  height: 60vh;
   border-top: 5px solid #2a2c34;
-/*   z-index: 1; */
   animation: bounce 1.5s infinite;
 }
+
 ::-webkit-input-placeholder {
   font-size: 1.3em;
 }
@@ -571,7 +527,6 @@ display: block;
   width: 300px;
 }
 
-
 .pageTitle{
   font-size: 2em;
   font-weight: bold;
@@ -580,42 +535,18 @@ display: block;
   color: grey;
 }
 
-.name {
+/* Champs du formulaire */
+.name, .email, .message {
   background-color: #ebebeb;
-  color: white;
-}
-.name:hover {
-  border-bottom: 5px solid #2a2c34;
-  height: 30px;
-  width: 380px;
   transition: ease 0.5s;
 }
 
-.email {
-  background-color: #ebebeb;
-  height: 2em;
-}
-
-.email:hover {
+.name:hover, .email:hover, .message:hover {
   border-bottom: 5px solid #2a2c34;
-  height: 30px;
   width: 380px;
-  transition: ease 0.5s;
 }
 
-.message {
-  background-color: #ebebeb;
-  overflow: hidden;
-  height: 10rem;
-}
-
-.message:hover {
-  border-bottom: 5px solid #2a2c34;
-  height: 12em;
-  width: 380px;
-  transition: ease 0.5s;
-}
-
+/* Form entries */
 .formEntry {
   display: block;
   margin: 30px auto;
@@ -626,6 +557,7 @@ display: block;
   transition: all 0.5s ease 0s;
 }
 
+/* Submit button */
 .submit {
   width: 200px;
   color: white;
@@ -637,137 +569,43 @@ display: block;
   box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
   transform: translateY(-3px);
   width: 300px;
- background-color: #0e3721;
+  background-color: #0e3721;
   border-radius: 0%;
 }
 
+/* Animation bounce pour form */
 @keyframes bounce {
-  0% {
-    tranform: translate(0, 4px);
-  }
-  50% {
-    transform: translate(0, 8px);
-  }
+  0% { tranform: translate(0, 4px); }
+  50% { transform: translate(0, 8px); }
 } 
 
-
-
-#imparfaite p {
+/* ===================== PARAGRAPHES ===================== */
+/* Imparfaite, monde, inconnu */
+#imparfaite p, #monde p, #inconnu p {
   color: #000;
-  text-align: justify;        /* clean, even edges on both sides */
-  text-justify: inter-word;   /* improves spacing for justification */
-  max-width: 700px;           /* readable text width on desktop */
-  margin: 1.5rem auto;        /* centers the block horizontally */
-  font-size: 1.1rem;          /* comfortable font size */
-  line-height: 1.8;           /* enough space between lines */
-  padding: 0 1rem;            /* breathing room on small screens */
+  text-align: justify;
+  text-justify: inter-word;
+  max-width: 700px;
+  margin: 1.5rem auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  padding: 0 1rem;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
 
-/* --- Responsive adjustments --- */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
-  #imparfaite p {
-    max-width: 600px;
-    font-size: 1rem;
-  }
+  #imparfaite p, #monde p, #inconnu p { max-width: 600px; font-size: 1rem; }
 }
-
 @media (max-width: 768px) {
-  #imparfaite p {
-    max-width: 500px;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    padding: 0 0.8rem;
-  }
+  #imparfaite p, #monde p, #inconnu p { max-width: 500px; font-size: 0.95rem; line-height: 1.7; padding: 0 0.8rem; }
 }
-
 @media (max-width: 480px) {
-  #imparfaite p {
-    max-width: 90%;         /* use most of the screen width */
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
+  #imparfaite p, #monde p, #inconnu p { max-width: 90%; font-size: 0.9rem; line-height: 1.6; }
 }
 
-
-
-#monde p {
-  color: #000;
-  text-align: justify;        /* clean, even edges on both sides */
-  text-justify: inter-word;   /* improves spacing for justification */
-  max-width: 700px;           /* readable text width on desktop */
-  margin: 1.5rem auto;        /* centers the block horizontally */
-  font-size: 1.1rem;          /* comfortable font size */
-  line-height: 1.8;           /* enough space between lines */
-  padding: 0 1rem;            /* breathing room on small screens */
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-}
-
-/* --- Responsive adjustments --- */
-@media (max-width: 1024px) {
-  #monde p {
-    max-width: 600px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #monde p {
-    max-width: 500px;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    padding: 0 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #monde p {
-    max-width: 90%;         /* use most of the screen width */
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-}
-
-#inconnu p {
-  color: #000;
-  text-align: justify;        /* clean, even edges on both sides */
-  text-justify: inter-word;   /* improves spacing for justification */
-  max-width: 700px;           /* readable text width on desktop */
-  margin: 1.5rem auto;        /* centers the block horizontally */
-  font-size: 1.1rem;          /* comfortable font size */
-  line-height: 1.8;           /* enough space between lines */
-  padding: 0 1rem;            /* breathing room on small screens */
-  font-weight: 400;
-  font-family: "Poppins", sans-serif;
-}
-
-/* --- Responsive adjustments --- */
-@media (max-width: 1024px) {
-  #inconnu p {
-    max-width: 600px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  #inconnu p {
-    max-width: 500px;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    padding: 0 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  #inconnu p {
-    max-width: 90%;         /* use most of the screen width */
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-}
-
+/* ===================== CURSOR CIRCLE ===================== */
 .circle {
   --circle-size: 40px;
   position: fixed;
@@ -779,15 +617,14 @@ display: block;
   left: calc(var(--circle-size) / 2 * -1);
   pointer-events: none;
   z-index: 9999;
-  
 }
 
-
+/* ===================== EXTRA CONTENT ===================== */
 .extra-content {
   margin-top: 5vh;
   text-align: center;
   color: rgb(0, 0, 0);
-   font-family: 'lexi';
+  font-family: 'lexi';
 }
 
 .extra-content h2,
@@ -796,9 +633,10 @@ display: block;
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-   font-family: 'lexi';
+  font-family: 'lexi';
 }
 
+/* Iframes */
 iframe {
   display: block;
   margin: 2rem auto;
@@ -809,19 +647,16 @@ iframe {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
-
 @media (max-width: 768px) {
-  iframe {
-    width: 100%;
-    height: auto;
-  }
+  iframe { width: 100%; height: auto; }
 }
 
+/* Logiciels list */
 .logiciels {
-  display: flex;       /* enable flex layout */
-  flex-direction: column; /* stack children vertically */
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-family: "lexi";
   margin-bottom: 10vh;
-  gap: 5px;           /* now gap works */
+  gap: 5px;
 }
