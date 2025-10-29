@@ -1,4 +1,4 @@
-le nom du projet en titre principal Portfolio de TON-NOM
+### Manel yaya portfolio
 un lien vers ton fichier Figma
 ⚠️ Donne accès uniquement à tes 2 enseignantes (pas en public) — voir consigne 3
 un lien vers ton tableau Trello ou GitHub Project
