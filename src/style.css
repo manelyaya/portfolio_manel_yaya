@@ -14,6 +14,7 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  
 }
 
 *:focus {
@@ -26,7 +27,7 @@ body {
   background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
   background-size: 450% 450%;
   animation: gradient 20s ease infinite;
-
+  overflow-x: hidden;
 
 
 }
@@ -144,24 +145,37 @@ h2 {
 
 
 
+.text {
+  width: 90%;               /* responsive width */
+  max-width: 700px;         /* keeps it from being too wide on large screens */
+  min-height: 220px;        /* ensures container doesn’t shrink when text changes */
+  margin: 2rem auto;        /* vertical spacing + center horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center horizontally */
+  justify-content: center;  /* center vertically */
+  text-align: center;
+  padding: 0 1rem;          /* padding for smaller screens */
+  box-sizing: border-box;   /* include padding in width */
+}
+
 .text h3 {
   color: #111;
   font-family: "lexi";
-  font-size: 40px;
-  margin-left: 46%;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* responsive font size */
+  margin: 0 0 1rem 0;
 }
 
 .text p {
-  font-size: 20px;
-  max-width: 700px;
+  font-size: clamp(1rem, 2.5vw, 1.25rem); /* responsive font size */
+  max-width: 100%;
   color: #111;
   font-family: "lexi";
-  margin: 2rem auto;
   line-height: 1.6;
-  text-align: center;
   letter-spacing: 0.5px;
-  padding: 0 1rem; /* adds space on the sides for smaller screens */
+  margin: 0;
 }
+
 
 /* Tablets */
 @media (max-width: 992px) {
@@ -237,25 +251,54 @@ a:hover {
 
 #profile {
   display: flex;
-  align-items: center;
+  align-items: flex-start;   /* stack neatly on mobile */
   justify-content: space-between;
   gap: 40px;
-  padding: 40px;
+  padding: 2rem;             /* smaller padding for all screens */
+  flex-wrap: wrap;           /* allow items to wrap on smaller screens */
+  max-width: 1200px;         /* optional, limits container width on large screens */
+  margin: 0 auto;            /* center horizontally */
 }
 
 .description {
-  width: 50%;
-  margin-left: 20rem;
+  flex: 1 1 400px;           /* grow/shrink with a min width of 400px */
   text-align: justify;
   line-height: 1.6;
+  margin-left: 0;            /* remove fixed 20rem margin */
+  min-width: 250px;          /* ensures text doesn’t get too small */
 }
 
 .camera {
-  width: 500px;
+  flex: 1 1 300px;           /* grows/shrinks, min width 300px */
+  max-width: 500px;          /* keeps original max width */
   height: auto;
-  margin-right: 20rem;
-
+  margin: 1rem auto;         /* centers on smaller screens */
 }
+
+/* Tablet */
+@media (max-width: 992px) {
+  #profile {
+    gap: 20px;
+    padding: 1.5rem;
+  }
+  .description, .camera {
+    flex: 1 1 100%;           /* stack vertically */
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  #profile {
+    flex-direction: column;   /* stack items */
+    padding: 1rem;
+  }
+  .description, .camera {
+    margin: 0 auto;           /* center both items */
+    width: 90%;               /* almost full width */
+  }
+}
+
 
 .nom {
   color: #111;
@@ -304,6 +347,16 @@ a:hover {
   box-shadow: 0 0 16px #09122C;
 
 }
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+  .card p:hover {
+    flex: 1; /* don’t expand on mobile */
+  }
+}
+
 
 .card p:hover {
   flex: 4;
@@ -407,7 +460,8 @@ a:hover {
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  width: 100%;       /* adapt to container */
+  max-width: 960px;  /* limit on large screens */
 }
 
 .slider2::before,
@@ -415,7 +469,7 @@ a:hover {
   content: "";
   height: 100px;
   position: absolute;
-  width: 200px;
+  width: 100%;
   z-index: 2;
   pointer-events: none;
 }
@@ -433,8 +487,7 @@ a:hover {
 
 .slider2 .slide-track {
   display: flex;
-  width: 2500px;
-  /* 10 slides x 250px */
+  width: 100%;
   animation: scroll 40s linear infinite;
 }
 
@@ -451,17 +504,65 @@ a:hover {
 }
 
 
+/* Footer container */
 footer {
-  align-items: center;
-  bottom: 0;
   display: flex;
-  font-size: 5em;
+  flex-direction: column;   /* stack vertically on small screens */
+  align-items: center;
   justify-content: center;
+  padding: 2rem 1rem;       /* internal spacing */
+  background-color: #262626;/* dark background */
+  color: #fff;
   width: 100%;
-  margin-top: 10vh;
-
-
+  box-sizing: border-box;
+  margin-top: 5rem;
 }
+
+/* Footer text */
+footer p {
+  margin: 0.3rem 0;         /* spacing between lines */
+  font-family: "lexi", sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.1rem); /* responsive font size */
+  text-align: center;
+  word-break: break-word;   /* prevent overflow on small screens */
+}
+
+/* Social links container */
+footer .socials {
+  display: flex;
+  flex-wrap: wrap;          /* wrap links on smaller screens */
+  gap: 1.5rem;              /* spacing between links */
+  margin-top: 1rem;
+  justify-content: center;  /* center on small screens */
+}
+
+/* Social links styling */
+footer .socials a {
+  color: #fff;
+  text-decoration: none;
+  font-size: clamp(1rem, 2vw, 1.2rem); /* responsive font size */
+  transition: color 0.3s;
+}
+
+footer .socials a:hover {
+  color: #ff6f61;           /* accent color on hover */
+}
+
+/* Optional: mobile tweaks */
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  footer .socials a {
+    font-size: 1rem;
+  }
+}
+
 
 #imparfaite img{
 display: block;

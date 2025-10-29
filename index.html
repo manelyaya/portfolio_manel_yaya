@@ -50,8 +50,9 @@
         </div>
 
         <!-- Photo + Nom -->
-        <div class="camera">
-          <img class="petit" src="./photos/photographer-16022_640.jpg" alt="photo de camera">
+       <!-- Photo + Nom -->
+<div class="camera" v-if="profile">
+  <img class="petit" :src="profile.images[0]" alt="Photo de profil">
           <div class="nom">
             <p>Manel Yaya</p>
           </div>
@@ -117,6 +118,13 @@
         <div class="slide-track">
 
           <!-- Première série d’icônes -->
+          <div class="slide"><img src="./photos/icons8-davinci-resolve-96.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-reaper-96.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-blender-100.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-photoshop-96.png" alt=""></div>
+          <div class="slide"><img src="./photos/icons8-vs-code-96.png" alt=""></div>
+
+          <!-- deuxieme série d’icônes -->
           <div class="slide"><img src="./photos/icons8-davinci-resolve-96.png" alt=""></div>
           <div class="slide"><img src="./photos/icons8-reaper-96.png" alt=""></div>
           <div class="slide"><img src="./photos/icons8-blender-100.png" alt=""></div>

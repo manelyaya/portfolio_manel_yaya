@@ -20,54 +20,62 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---------------------------
-  // Main Vue app (slider + projects)
-  // ---------------------------
-  const vueApp = document.querySelector('#vue-app');
-  if (vueApp) {
-    const app = Vue.createApp({
-      data() {
-        return {
-          profile: null,
-          projects: [],
-          currentSlide: 0
-        };
-      },
-      computed: {
-        currentProject() {
-          return this.projects[this.currentSlide] || {};
-        }
-      },
-      methods: {
-        handleHashChange() {
-          const hash = window.location.hash;
-          const index = parseInt(hash.replace('#slide-', '')) - 1;
-          if (!isNaN(index) && index >= 0 && index < this.projects.length) {
-            this.currentSlide = index;
-          }
-        }
-      },
-      mounted() {
-        fetch('./src/projects.json')
-          .then(res => res.json())
-          .then(data => {
-            this.profile = data.profile;
-            this.projects = data.projects;
-
-            this.$nextTick(() => {
-              gsapInit(); // <-- run GSAP after DOM is updated
-            });
-
-            this.handleHashChange();
-          })
-          .catch(error => console.error('Erreur chargement JSON :', error));
-
-        window.addEventListener('hashchange', this.handleHashChange);
+ // ---------------------------
+// Main Vue app (slider + projects)
+// ---------------------------
+const vueApp = document.querySelector('#vue-app');
+if (vueApp) {
+  const app = Vue.createApp({
+    data() {
+      return {
+        profile: null,
+        projects: [],
+        currentSlide: 0
+      };
+    },
+    computed: {
+      currentProject() {
+        return this.projects[this.currentSlide] || {};
       }
-    });
+    },
+    methods: {
+      goToSlide(index) {
+        this.currentSlide = index; // update text + slider
+      },
+      handleHashChange() {
+        const hash = window.location.hash;
+        const index = parseInt(hash.replace('#slide-', '')) - 1;
+        if (!isNaN(index) && index >= 0 && index < this.projects.length) {
+          this.currentSlide = index;
+        }
+      }
+    },
+    mounted() {
+  fetch('./src/projects.json')
+    .then(res => res.json())
+    .then(data => {
+      this.profile = data.profile;
+      this.projects = data.projects;
 
-    app.mount('#vue-app');
-  }
+      this.$nextTick(() => {
+        const slider = this.$el.querySelector('.slider');
+        if (slider) slider.scrollLeft = 0; // reset slider to first image
+        this.currentSlide = 0;             // reset text to first project
+        gsapInit();                        // run GSAP
+      });
+
+      this.handleHashChange(); // optional: for hash navigation
+    })
+    .catch(error => console.error('Erreur chargement JSON :', error));
+
+  window.addEventListener('hashchange', this.handleHashChange);
+}
+
+  });
+
+  app.mount('#vue-app');
+}
+
 
   // ---------------------------
   // Projects page app
