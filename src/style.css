@@ -25,7 +25,6 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
   overflow-x: hidden; /* prevents horizontal scroll */
    scroll-behavior: smooth;
 }
@@ -272,7 +271,8 @@ a:hover {
   text-align: justify;
   line-height: 1.6;
   margin-left: 0;            /* remove fixed 20rem margin */
-  min-width: 250px;          /* ensures text doesn’t get too small */
+  min-width: 250px;  
+  margin-top: 40px;        /* ensures text doesn’t get too small */
 }
 
 .camera {
@@ -870,4 +870,11 @@ iframe {
   }
 }
 
-
+.logiciels {
+  display: flex;       /* enable flex layout */
+  flex-direction: column; /* stack children vertically */
+  text-align: center;
+  font-family: "lexi";
+  margin-bottom: 10vh;
+  gap: 5px;           /* now gap works */
+}

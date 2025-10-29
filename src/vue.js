@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         start: "top 90%",
         onEnter: () => gsap.to(elem, { y: 0, autoAlpha: 1, duration: 1, ease: "expo.out" }),
         onEnterBack: () => gsap.to(elem, { y: 0, autoAlpha: 1, duration: 1, ease: "expo.out" }),
-        markers: true // optional for debugging
       });
     });
   }
@@ -154,3 +153,17 @@ if (vueApp) {
   }
 });
 
+const vueLogiciels = Vue.createApp({
+  data() {
+    return { logiciels: [] };
+  },
+  mounted() {
+    fetch('./src/projects.json')
+      .then(res => res.json())
+      .then(data => {
+        this.logiciels = data.logiciels;
+      });
+  }
+});
+
+vueLogiciels.mount('#vue-logiciels');

@@ -22,7 +22,7 @@
           <li><a href="./projet.html">PROJETS</a></li>
           <li><a href="./contact.html">CONTACT</a></li>
 
-          <!-- Mode sombre / clair (géré par Vue.js) -->
+          <!-- Mode sombre / clair -->
           <div id="app" :class="{'dark-mode': isDarkMode}">
             <a href="#"
               class="mode-btn"
@@ -44,13 +44,12 @@
     <div id="vue-profile">
       <div id="profile" v-if="profile">
 
-        <!-- Texte de description (chargé dynamiquement par Vue.js) -->
+        <!-- Texte de description -->
         <div class="description">
           <p class="gs_reveal">{{ profile.description }}</p>
         </div>
 
         <!-- Photo + Nom -->
-       <!-- Photo + Nom -->
 <div class="camera" v-if="profile">
   <img class="petit" :src="profile.images[0]" alt="Photo de profil">
           <div class="nom">
@@ -105,13 +104,16 @@
     </div>
 
 
-    <!-- ===================== SECTION LOGICIELS ===================== -->
-    <section class="part">
+ <!-- ===================== SECTION LOGICIELS ===================== -->
+<section id="vue-logiciels">
+  <div class="logiciels" v-if="logiciels.length">
+    <h4 class="gs_reveal">LOGICIELS</h4>
+    <p v-for="(logiciel, index) in logiciels" :key="index" class="gs_reveal">
+      {{ logiciel }}
+    </p>
+  </div>
 
-      <!-- Titre -->
-      <div class="logicels">
-        <h4 class="gs_reveal">LOGICIELS</h4>
-      </div>
+
 
       <!-- Slider horizontal des icônes de logiciels -->
       <div class="slider2 gs_reveal">
@@ -130,22 +132,14 @@
           <div class="slide"><img src="./photos/icons8-blender-100.png" alt=""></div>
           <div class="slide"><img src="./photos/icons8-photoshop-96.png" alt=""></div>
           <div class="slide"><img src="./photos/icons8-vs-code-96.png" alt=""></div>
-
-    
-
         </div>
+  
       </div>
 
       <!-- ======== PIED DE PAGE ======== -->
       <footer class="fixed-footer">
         <div class="footer-content">
-          <p>Manel Yaya</p>
-          <p>manelyaya4@gmail.com</p>
-
-          <!-- Liens vers réseaux sociaux -->
-          <div class="socials">
-           <p><a href="mailto:manelyaya4@gmail.com">manelyaya4@gmail.com</a></p>
-
+          <p>Fait par Manel Yaya</p>
           </div>
         </div>
       </footer>
