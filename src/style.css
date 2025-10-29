@@ -672,3 +672,10 @@ body.dark-mode * {
 body.dark-mode a:hover {
   color: #d6d3cf !important;
 }
+
+/* Exceptions: titles that stay dark on white background */
+body.dark-mode .title,
+body.dark-mode .pageTitle,
+body.dark-mode .secondaryTitle {
+  color: #111 !important; /* or any dark color that contrasts with white background */
+}
