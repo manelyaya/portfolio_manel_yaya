@@ -17,6 +17,18 @@
                 <li><a href="./index.html">MY</a></li>
                 <li><a href="./projet.html">PROJETS</a></li>
                 <li><a href="./contact.html">CONTACT</a></li>
+
+                    <!-- Mode sombre / clair -->
+          <div id="app" :class="{'dark-mode': isDarkMode}">
+            <a href="#"
+              class="mode-btn"
+              @click.prevent="toggleDarkMode">
+              {{ isDarkMode ? 'Light MØde' : 'Dark MØde' }}
+            </a>
+            <div class="mode-overlay" :class="{'active': isDarkMode}"></div>
+          </div>
+        </ul>
+      </div>
             </ul>
         </div>
     </nav>
@@ -36,19 +48,7 @@
   <button type="submit" class="submit formEntry">Contactez-moi</button>
 </form>
 
-     <!-- ======== PIED DE PAGE ======== -->
-      <footer class="fixed-footer">
-        <div class="footer-content">
-          <p>Manel Yaya</p>
-          <p>manelyaya4@gmail.com</p>
-
-          <!-- Liens vers réseaux sociaux -->
-          <div class="socials">
-           <p><a href="mailto:manelyaya4@gmail.com">manelyaya4@gmail.com</a></p>
-
-          </div>
-        </div>
-      </footer>
+    
 
     </section>
 

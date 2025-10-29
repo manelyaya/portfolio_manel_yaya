@@ -107,24 +107,35 @@ if (vueApp) {
   }
 
   // ---------------------------
-  // Dark/Light Mode toggle
-  // ---------------------------
-  const vueMode = document.querySelector('#app');
-  if (vueMode) {
-    const { createApp } = Vue;
+// Dark/Light Mode toggle
+// ---------------------------
+const vueMode = document.querySelector('#app');
+if (vueMode) {
+  const { createApp } = Vue;
 
-    createApp({
-      data() {
-        return { isDarkMode: false };
-      },
-      methods: {
-        toggleDarkMode() {
-          this.isDarkMode = !this.isDarkMode;
-          document.body.classList.toggle('dark-mode', this.isDarkMode);
-        }
+  createApp({
+    data() {
+      return { isDarkMode: false };
+    },
+    mounted() {
+      // Check if dark mode was previously enabled
+      const savedMode = localStorage.getItem('darkMode');
+      if (savedMode === 'true') {
+        this.isDarkMode = true;
+        document.body.classList.add('dark-mode');
       }
-    }).mount('#app');
-  }
+    },
+    methods: {
+      toggleDarkMode() {
+        this.isDarkMode = !this.isDarkMode;
+        document.body.classList.toggle('dark-mode', this.isDarkMode);
+        // Save the mode so it persists
+        localStorage.setItem('darkMode', this.isDarkMode);
+      }
+    }
+  }).mount('#app');
+}
+
 
   // ---------------------------
   // Profile section app

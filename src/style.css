@@ -67,40 +67,28 @@ body {
 
 
 
-
-/* 🌙 Dark mode overrides */
-body.dark-mode .hero,
-body.dark-mode .contact,
-#app.dark-mode .hero,
-#app.dark-mode .contact {  
-  
-  background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+/* ===================== DARK MODE ===================== */
+body.dark-mode {
+  background: linear-gradient(-45deg, #2c2d2d, #414142, #686866, #acaba7);
   background-size: 300% 300%;
   animation: gradient 20s ease infinite;
-
-
- 
+  color: #f1f1f1; /* texte global en blanc */
+  transition: gradient 0.5s ease, color 0.5s ease;
 }
 
-body.dark-mode .part,
-#app.dark-mode .part {
-     background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
-  background-size: 300% 300%;
-  animation: gradient 20s ease infinite;
-
- 
-  color: #f1f1f1;
+/* Texte des liens de la navbar en blanc */
+body.dark-mode .navbar a {
+  color: #ffffff;
+}
+body.dark-mode .navbar a:hover {
+  color: #d6d3cf;
 }
 
-body.dark-mode .projet,
-#app.dark-mode .projet {
-      background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
-  background-size: 300% 300%;
-  animation: gradient 20s ease infinite;
-
-  
-  color: #000;
+/* Texte des paragraphes à l'intérieur des cartes devient blanc */
+body.dark-mode .card a {
+  color: #ffffff;
 }
+
 .mode-overlay {
   position: fixed;
   top: 0;
@@ -509,65 +497,30 @@ a:hover {
   object-fit: contain;
 }
 
-
 /* Footer container */
-footer {
-  display: flex;
-  flex-direction: column;   /* stack vertically on small screens */
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 1rem;       /* internal spacing */
-  background-color: #262626;/* dark background */
-  color: #fff;
+.fixed-footer {
   width: 100%;
-  box-sizing: border-box;
-  margin-top: 5rem;
-}
-
-/* Footer text */
-footer p {
-  margin: 0.3rem 0;         /* spacing between lines */
-  font-family: "lexi", sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1.1rem); /* responsive font size */
-  text-align: center;
-  word-break: break-word;   /* prevent overflow on small screens */
-}
-
-/* Social links container */
-footer .socials {
-  display: flex;
-  flex-wrap: wrap;          /* wrap links on smaller screens */
-  gap: 1.5rem;              /* spacing between links */
-  margin-top: 1rem;
-  justify-content: center;  /* center on small screens */
-}
-
-/* Social links styling */
-footer .socials a {
+  background-color: #262626;
   color: #fff;
-  text-decoration: none;
-  font-size: clamp(1rem, 2vw, 1.2rem); /* responsive font size */
-  transition: color 0.3s;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: "lexi", sans-serif;
+  font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
-footer .socials a:hover {
-  color: #ff6f61;           /* accent color on hover */
+/* Make footer stick to bottom if page is short */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
-/* Optional: mobile tweaks */
-@media (max-width: 480px) {
-  footer {
-    padding: 1.5rem 0.5rem;
-  }
-
-  footer p {
-    font-size: 0.9rem;
-  }
-
-  footer .socials a {
-    font-size: 1rem;
-  }
+main, section {
+  flex: 1; /* push footer to bottom */
 }
+
 
 
 #imparfaite img{
@@ -697,13 +650,7 @@ display: block;
   }
 } 
 
-.footer-content{
-  width: 100%;
-  font-size: 20%;
-  color: white;
-  display: flex;
-  justify-content: space-around;
-}
+
 
 #imparfaite p {
   color: #000;
