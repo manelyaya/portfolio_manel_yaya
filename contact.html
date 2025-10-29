@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projets</title>
     <link rel="stylesheet" href="./src/style.css">
-    <script src="./src/javascript.js"></script>
 </head>
 
 <body>
+  
 <section class="contact">
     <nav id="desktop-nav">
         <div>
@@ -29,21 +29,39 @@
       <textarea class="message formEntry" placeholder="Message"></textarea>
       <button class="submit formEntry" onclick="thanks()">Contactez-moi</button>
     </form>
-     <footer class="fixed-footer">
+    <!-- ======== PIED DE PAGE ======== -->
+      <footer class="fixed-footer">
         <div class="footer-content">
-            <p>Manel Yaya</p>
-            <p>manelyaya4@gmail.com</a></p>
-            <div class="socials">
-              <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-              <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
-              <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-            </div>
+          <p>Manel Yaya</p>
+          <p>manelyaya4@gmail.com</p>
+
+          <!-- Liens vers réseaux sociaux -->
+          <div class="socials">
+           <p><a href="mailto:manelyaya4@gmail.com">manelyaya4@gmail.com</a></p>
+
           </div>
-    </footer>
+        </div>
+      </footer>
+
+    </section>
+
   </section>
 
-   
+ 
 
+ <!-- Cercle animé curseur -->
+  <div class="circle"></div>
+
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="./src/vue.js"></script>
+  <script src="https://unpkg.com/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://assets.codepen.io/16327/SplitText3.min.js"></script>
+  <script src="./src/javascript.js"></script>
+  <!-- Cursor script (works on all pages) -->
+<script src="./src/cursor.js"></script>
 
 </body>
 
