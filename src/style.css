@@ -660,3 +660,15 @@ iframe {
   margin-bottom: 10vh;
   gap: 5px;
 }
+/* ===================== GLOBAL DARK MODE TEXT FIX ===================== */
+body.dark-mode,
+body.dark-mode * {
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  text-decoration-color: #ffffff !important;
+}
+
+/* Optional – soften hover color for better contrast */
+body.dark-mode a:hover {
+  color: #d6d3cf !important;
+}
