@@ -17,3 +17,5 @@ Documentation web:
 Curseur : https://codepen.io/gusevdigital/pen/MWxyXRa
 
 Carrousel : https://codepen.io/Schepp/pen/WNbQByE
+
+Gsap animation: https://codepen.io/snorkltv/pen/azOmvxL
