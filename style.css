@@ -20,17 +20,14 @@
   outline: 0;
 }
 
-.cursor {
-  z-index: 999;
-  background: #09122C;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
 
 body {
   height: 100%;
   display: grid;
+  background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+
 
 
 }
@@ -63,30 +60,18 @@ html {
 }
 
 .hero, .contact{
-  background:
-  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-  linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
-background-size: 400% 400%;
-animation: gradient 25s ease infinite;
+ 
 height: 100vh;
 }
 
 .projet {
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #1e1f26, #2a2c34, #3b3d47, #4a4c57);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+  
   min-height: 150vh;
 
 }
 
 .part {
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+ 
   min-height: 30%;
 }
 
@@ -96,34 +81,35 @@ height: 100vh;
 body.dark-mode .hero,
 body.dark-mode .contact,
 #app.dark-mode .hero,
-#app.dark-mode .contact {
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #1e1f26, #2a2c34, #3b3d47, #4a4c57);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+#app.dark-mode .contact {  
+  
+  background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+
+
+ 
 }
 
 body.dark-mode .part,
 #app.dark-mode .part {
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.3'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #1e1f26, #2a2c34, #3b3d47, #4a4c57);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+     background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+
+ 
   color: #f1f1f1;
 }
 
 body.dark-mode .projet,
 #app.dark-mode .projet {
-  background:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E") repeat,
-    linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
-  background-size: 400% 400%;
-  animation: gradient 25s ease infinite;
+      background: linear-gradient(-45deg, #faf9f6, #f8f7f3, #e9f3ef, #dff0f7, #ffffff);
+  background-size: 300% 300%;
+  animation: gradient 20s ease infinite;
+
+  
   color: #000;
 }
-
 .mode-overlay {
   position: fixed;
   top: 0;
