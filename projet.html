@@ -54,62 +54,83 @@
     <div id="imparfaite" v-if="projects.length > 0">
       <h1 class="titre1">{{ projects[0].title.toUpperCase() }}</h1>
       <img :src="projects[0].images[0]" alt="photo du projet Imparfaite" />
+      <p><strong>Description longue :</strong> {{ projects[0].long_description }}</p>
        <p><strong>Équipe :</strong> {{ projects[0].team }}</p>
       <p><strong>Cours :</strong> {{ projects[0].course }}</p>
       <p><strong>Rôle :</strong> {{ projects[0].role }}</p>
       <p><strong>Logiciels :</strong> {{ projects[0].tools.join(', ') }}</p>
-      <p><strong>Description courte :</strong> {{ projects[0].short_description }}</p>
-      <p><strong>Description longue :</strong> {{ projects[0].long_description }}</p>
     </div>
 
     <!-- ======== PROJET 2 ======== -->
     <div id="monde" v-if="projects.length > 1">
       <h1 class="titre1">{{ projects[1].title.toUpperCase() }}</h1>
       <img :src="projects[1].images[0]" alt="photo du projet Monde à l'envers" />
+      <p><strong>Description</strong> {{ projects[1].long_description }}</p>
        <p><strong>Équipe :</strong> {{ projects[1].team }}</p>
       <p><strong>Cours :</strong> {{ projects[1].course }}</p>
       <p><strong>Rôle :</strong> {{ projects[1].role }}</p>
       <p><strong>Logiciels :</strong> {{ projects[1].tools.join(', ') }}</p>
-      <p><strong>Description courte :</strong> {{ projects[1].short_description }}</p>
-      <p><strong>Description longue :</strong> {{ projects[1].long_description }}</p>
+      
     </div>
 
     <!-- ======== PROJET 3 ======== -->
     <div id="inconnu" v-if="projects.length > 2">
       <h1 class="titre1">{{ projects[2].title.toUpperCase() }}</h1>
       <img :src="projects[2].images[0]" alt="photo du projet Monde inconnu" />
+       <p><strong>Description longue :</strong> {{ projects[2].long_description }}</p>
        <p><strong>Équipe :</strong> {{ projects[2].team }}</p>
       <p><strong>Cours :</strong> {{ projects[2].course }}</p>
       <p><strong>Rôle :</strong> {{ projects[2].role }}</p>
       <p><strong>Logiciels :</strong> {{ projects[2].tools.join(', ') }}</p>
-      <p><strong>Description courte :</strong> {{ projects[2].short_description }}</p>
-      <p><strong>Description longue :</strong> {{ projects[2].long_description }}</p>
+
+      <!-- ======== EXTRA DETAILS FOR "UN MONDE INCONNU" ======== -->
+<div class="extra-content" v-if="projects[2].extra">
+  <h2>Processus du projet</h2>
+  <p>{{ projects[2].extra.processus }}</p>
+
+  <h2>Inspiration</h2>
+  <p>{{ projects[2].extra.inspiration }}</p>
+
+  <h3>Moodboard</h3>
+  <img :src="projects[2].extra.moodboard" alt="Moodboard du projet" />
+
+  <h3>Colorisation</h3>
+  <img :src="projects[2].extra.colorisation" alt="Colorisation du projet" />
+
+  <h3>Accessoires</h3>
+  <div class="accessoires">
+    <img v-for="(img, i) in projects[2].extra.accessoires" :key="i" :src="img" alt="Accessoire" />
+  </div>
+
+  <h3>Horaire de tournage</h3>
+  <img :src="projects[2].extra.horaire" alt="Horaire de tournage" />
+</div>
+
 
       <!-- ======== PROJET 4 ======== -->
     <div id="pixar" v-if="projects.length > 3">
       <h1 class="titre1">{{ projects[3].title.toUpperCase() }}</h1>
       <img :src="projects[3].images[0]" alt="photo du projet Monde inconnu" />
+       <p><strong>Description:</strong> {{ projects[3].long_description }}</p>
        <p><strong>Équipe :</strong> {{ projects[3].team }}</p>
       <p><strong>Cours :</strong> {{ projects[3].course }}</p>
       <p><strong>Rôle :</strong> {{ projects[3].role }}</p>
       <p><strong>Logiciels :</strong> {{ projects[3].tools.join(', ') }}</p>
-      <p><strong>Description courte :</strong> {{ projects[3].short_description }}</p>
-      <p><strong>Description longue :</strong> {{ projects[3].long_description }}</p>
 
-      <!-- ======== PIED DE PAGE ======== -->
+
+       <!-- ======== PIED DE PAGE ======== -->
       <footer class="fixed-footer">
         <div class="footer-content">
           <p>Manel Yaya</p>
           <p>manelyaya4@gmail.com</p>
 
+          <!-- Liens vers réseaux sociaux -->
           <div class="socials">
-            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a> |
-            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a> |
-            <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+           <p><a href="mailto:manelyaya4@gmail.com">manelyaya4@gmail.com</a></p>
+
           </div>
         </div>
       </footer>
-    </div>
 
   </section>
 
