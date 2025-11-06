@@ -679,3 +679,9 @@ body.dark-mode .pageTitle,
 body.dark-mode .secondaryTitle {
   color: #111 !important; /* or any dark color that contrasts with white background */
 }
+
+.emailcontact{
+  text-align: center;
+  margin-top: 2%;
+  font-size: larger;
+}
